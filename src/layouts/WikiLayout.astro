@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
+
+const services = [
+  { name:'identity-service', title:'身份服务', port:11001 },
+  { name:'profile-service', title:'用户资料服务', port:11002 },
+  { name:'tenant-service', title:'租户服务', port:11003 },
+  { name:'session-service', title:'会话服务', port:11004 },
+  { name:'mfa-service', title:'多因素认证服务', port:11005 },
+  { name:'oauth-service', title:'OAuth 服务', port:11006 },
+  { name:'wallet-service', title:'钱包服务', port:11011 },
+  { name:'point-service', title:'积分服务', port:11012 },
+  { name:'audit-service', title:'审计服务', port:11013 },
+  { name:'notification-service', title:'通知服务', port:11014 },
+  { name:'communication-service', title:'通信服务', port:11015 },
+  { name:'storage-service', title:'存储服务', port:11016 },
+  { name:'billing-service', title:'计费服务', port:11017 },
+  { name:'compliance-service', title:'合规服务', port:11018 },
+  { name:'status-service', title:'状态服务', port:11019 },
+  { name:'secret-service', title:'密钥服务', port:11020 },
+  { name:'saml-service', title:'SAML 服务', port:11021 },
+  { name:'pay-service', title:'支付服务', port:11022 },
+  { name:'thirdparty-service', title:'第三方服务', port:11023 },
+  { name:'verification-service', title:'身份验证服务', port:11024 },
+  { name:'rbac-service', title:'RBAC 服务', port:11025 },
+  { name:'gateway-service', title:'网关服务', port:11080 },
+];
+
+export interface Props {
+  title?: string;
+  description?: string;
+  jsonLd?: Record<string, any>[];
+  ogType?: string;
+}
+const {
+  title = 'Autional API 知识库',
+  description = '覆盖全部 22 个 Autional 微服务的交互式 API 文档，含详尽的端点规格说明。',
+  jsonLd = [],
+  ogType = 'website',
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const currentSvc = Astro.url.pathname.split('/')[1] || '';
+const ogImage = new URL('/og-default.png', Astro.site).href;
+
+const defaultJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Autional API 知识库',
+  url: 'https://wiki.autional.cn',
+  description: 'Autional 全部微服务的 API 端点文档。',
+  publisher: { '@type': 'Organization', name: 'Autional', url: 'https://www.autional.cn' },
+};
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical.href}>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=7">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7">
+  <link rel="manifest" href="/site.webmanifest?v=7">
+  <meta name="theme-color" content="#003153">
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical.href} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:site_name" content="Autional API 知识库" />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:site" content="@autional" />
+  <meta name="twitter:creator" content="@autional" />
+  <script type="application/ld+json" set:html={JSON.stringify(defaultJsonLd)} />
+  {jsonLd.map(item => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
+</head>
+<body class="min-h-screen antialiased">
+  <!-- 顶部栏 -->
+  <header class="sticky top-0 z-50 h-14 flex items-center justify-between px-6 border-b border-primary-100/70 bg-white/90 backdrop-blur-xl">
+    <a href="/" class="flex items-center gap-2.5 no-underline">
+      <img src="/logo-mark.svg" alt="Autional" class="h-7 w-7 object-contain">
+      <span class="text-[1.05rem] font-extrabold tracking-[-0.03em] text-primary-900">Autional</span>
+      <span class="hidden sm:inline text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-primary-400 ml-1.5">API 知识库</span>
+    </a>
+    <div class="flex items-center gap-5">
+      <a href="https://reference.autional.cn" class="text-xs font-medium text-primary-500 hover:text-primary-700 transition">API 参考</a>
+      <a href="https://github.com/autional-cn/wiki" class="text-xs font-medium text-primary-500 hover:text-primary-700 transition">GitHub</a>
+      <a href="https://www.autional.cn" class="text-xs font-medium text-primary-500 hover:text-primary-700 transition">autional.cn &rarr;</a>
+    </div>
+  </header>
+
+  <div class="flex h-[calc(100vh-56px)] overflow-hidden">
+    <!-- 侧边栏 -->
+    <aside class="w-60 shrink-0 border-r border-primary-100/50 bg-white overflow-y-auto">
+      <div class="sticky top-0 bg-white/95 backdrop-blur border-b border-primary-100/50 px-4 py-3 z-10">
+        <span class="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-primary-500">服务列表</span>
+      </div>
+      <nav class="py-2">
+        {services.map(s => {
+          const active = currentSvc === s.name;
+          return (
+            <a href={`/${s.name}/`} class={`group flex items-center justify-between mx-2 my-0.5 rounded-xl px-3 py-2 transition text-sm ${
+              active
+                ? 'bg-primary-700 text-white shadow-soft'
+                : 'text-neutral-600 hover:bg-primary-50 hover:text-primary-800'
+            }`}>
+              <span class="font-medium truncate">{s.title}</span>
+              {active && <span class="text-[0.6rem] opacity-60 font-mono ml-1 shrink-0">{s.port}</span>}
+            </a>
+          );
+        })}
+      </nav>
+    </aside>
+
+    <!-- 主内容区 -->
+    <div class="flex-1 flex overflow-hidden bg-neutral-50/50">
+      <slot />
+    </div>
+  </div>
+</body>
+</html>

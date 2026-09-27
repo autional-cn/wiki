@@ -1,0 +1,70 @@
+---
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import WikiLayout from '../layouts/WikiLayout.astro';
+
+export async function getStaticPaths() {
+  const svcs = ["identity-service","profile-service","tenant-service","session-service","mfa-service","oauth-service","wallet-service","point-service","audit-service","notification-service","communication-service","storage-service","billing-service","compliance-service","status-service","secret-service","saml-service","pay-service","thirdparty-service","verification-service","rbac-service","gateway-service"];
+  return svcs.map(n => ({ params: { service: n } }));
+}
+
+const { service } = Astro.params;
+
+// Read pre-generated wiki HTML at build time
+const htmlPath = join(process.cwd(), 'public/wiki/api', service ?? '', 'index.html');
+let pageTitle = `${service} API 文档 — Autional`;
+let description = '';
+let endpointHtml = '';
+let inlineStyles = '';
+let endpointCount = 0;
+let jsonLdScripts: Record<string, any>[] = [];
+
+try {
+  const html = readFileSync(htmlPath, 'utf-8');
+
+  const titleMatch = html.match(/<title>(.*?)<\/title>/);
+  if (titleMatch) pageTitle = titleMatch[1];
+
+  const descMatch = html.match(/<meta name="description" content="([^"]*)"/);
+  if (descMatch) description = descMatch[1];
+
+  const styleMatch = html.match(/<style>([\s\S]*?)<\/style>/);
+  if (styleMatch) inlineStyles = styleMatch[1];
+
+  // Extract only the <main> content (pre-generated HTML may use bare <main> or <main class="...">)
+  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/);
+  if (mainMatch) {
+    endpointHtml = mainMatch[1];
+  } else {
+    const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/);
+    if (bodyMatch) endpointHtml = bodyMatch[1];
+  }
+
+  // Count endpoint rows for the header
+  const rowMatches = endpointHtml.match(/<tr>/g);
+  endpointCount = rowMatches ? rowMatches.length : 0;
+
+  const jsonLdRe = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+  let m;
+  while ((m = jsonLdRe.exec(html)) !== null) {
+    try { jsonLdScripts.push(JSON.parse(m[1])); } catch {}
+  }
+} catch {
+  endpointHtml = '<p class="text-sm text-neutral-400 py-24 text-center">端点尚未收录。请运行 sync-wiki-zh.py 生成文档内容。</p>';
+}
+---
+
+<WikiLayout title={pageTitle} description={description} jsonLd={jsonLdScripts}>
+  <div class="flex-1 overflow-y-auto bg-neutral-50/50">
+    <div class="sticky top-0 bg-white/95 backdrop-blur border-b border-primary-100/50 px-4 py-3 z-10">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-semibold text-primary-900 truncate">{service}</span>
+        <span class="text-[0.65rem] font-mono font-medium text-primary-400">{endpointCount} 个端点</span>
+      </div>
+    </div>
+    <div class="wiki-content px-8 py-10 max-w-4xl">
+      {inlineStyles && <style set:html={inlineStyles} />}
+      <div set:html={endpointHtml} />
+    </div>
+  </div>
+</WikiLayout>
