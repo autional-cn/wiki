@@ -18,29 +18,14 @@
 
 @layer components {
   .wiki-detail-content {
-    /* Brand-aligned CSS variable overrides */
-    --c-primary: #124b70;
-    --c-primary-bg: #e9f3f9;
-    --c-bg: #ffffff;
-    --c-bg2: #f8fafc;
-    --c-text: #0f172a;
-    --c-text2: #475569;
-    --c-border: #d1e5f2;
-    --c-code-bg: #e9f3f9;
-    --c-tag-bg: #d6f0fa;
-    --c-tag-text: #1d434f;
-    --c-method-get: #059669;
-    --c-method-post: #124b70;
-    --c-method-put: #d97706;
-    --c-method-delete: #dc2626;
-    --c-method-patch: #7c3aed;
-    --c-deprecated: #dc2626;
-    --c-deprecated-bg: #fef2f2;
-
+    /* 这里原先有 17 个 --c-* 局部变量（--c-primary / --c-bg / --c-method-* 等）。
+       全站检索 var(--c- 命中 0 处——是死代码，已删除。
+       其中大部分值本来就是本站加载的 docs profile 色阶（例如原来的 --c-primary: #124b70
+       就等于 profile 的 primary-600），所以下面改为直接消费令牌，亮色下渲染零变化。 */
     max-width: 860px;
     font-family: "Noto Sans SC", Inter, ui-sans-serif, system-ui, sans-serif;
     line-height: 1.7;
-    color: #334155;
+    color: var(--color-neutral-800);
   }
 
   .wiki-detail-content h1 {
@@ -57,8 +42,8 @@
 
   .wiki-detail-content h1 code.path {
     font-weight: 500;
-    color: #124b70;
-    background: #e9f3f9;
+    color: var(--color-primary-600);
+    background: var(--color-primary-50);
     padding: 0.125rem 0.5rem;
     border-radius: 6px;
   }
@@ -71,13 +56,13 @@
     margin-top: 2.25rem;
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #d1e5f2;
+    border-bottom: 1px solid var(--color-primary-100);
   }
 
   .wiki-detail-content h3 {
     font-size: 1.05rem;
     font-weight: 600;
-    color: #032845;
+    color: var(--color-primary-800);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
   }
@@ -85,7 +70,7 @@
   .wiki-detail-content h4 {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #334155;
+    color: var(--color-neutral-800);
     margin-top: 1rem;
     margin-bottom: 0.375rem;
   }
@@ -93,12 +78,12 @@
   .wiki-detail-content p {
     margin: 0.5rem 0;
     line-height: 1.75;
-    color: #475569;
+    color: var(--color-neutral-700);
   }
 
   .wiki-detail-content .summary {
     font-size: 0.95rem;
-    color: #475569;
+    color: var(--color-neutral-700);
     margin: 0.5rem 0 1rem;
     line-height: 1.7;
   }
@@ -116,8 +101,8 @@
     font-weight: 600;
     padding: 0.15rem 0.625rem;
     border-radius: 999px;
-    border: 1px solid #d1e5f2;
-    color: #475569;
+    border: 1px solid var(--color-primary-100);
+    color: var(--color-neutral-700);
     background: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -133,8 +118,8 @@
   }
 
   .wiki-detail-content .meta-item.POST {
-    color: #124b70;
-    border-color: #124b70;
+    color: var(--color-primary-600);
+    border-color: var(--color-primary-600);
   }
 
   .wiki-detail-content .meta-item.PUT {
@@ -143,8 +128,8 @@
   }
 
   .wiki-detail-content .meta-item.DELETE {
-    color: #dc2626;
-    border-color: #dc2626;
+    color: var(--color-danger-text);
+    border-color: var(--color-danger-text);
   }
 
   .wiki-detail-content .meta-item.PATCH {
@@ -158,8 +143,8 @@
   }
 
   .wiki-detail-content .meta-item.authenticated {
-    color: #124b70;
-    border-color: #124b70;
+    color: var(--color-primary-600);
+    border-color: var(--color-primary-600);
   }
 
   /* Tables (parameters, responses, schemas) */
@@ -171,7 +156,7 @@
     font-size: 0.8rem;
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid #d1e5f2;
+    border: 1px solid var(--color-primary-100);
     box-shadow: 0 8px 20px rgba(0, 49, 83, 0.06);
   }
 
@@ -202,7 +187,7 @@
 
   .wiki-detail-content td {
     padding: 0.55rem 0.75rem;
-    border-bottom: 1px solid #d1e5f2;
+    border-bottom: 1px solid var(--color-primary-100);
     vertical-align: top;
     background: #ffffff;
   }
@@ -212,13 +197,13 @@
   }
 
   .wiki-detail-content tbody tr:hover td {
-    background: #e9f3f9;
+    background: var(--color-primary-50);
   }
 
   .wiki-detail-content td code {
     font-size: 0.72rem;
-    background: #e9f3f9;
-    color: #124b70;
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
     padding: 0.1rem 0.4rem;
     border-radius: 4px;
     white-space: nowrap;
@@ -231,15 +216,15 @@
   }
 
   .wiki-detail-content p code {
-    background: #e9f3f9;
-    color: #124b70;
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
     padding: 0.1rem 0.4rem;
     border-radius: 4px;
   }
 
   /* Links */
   .wiki-detail-content a {
-    color: #124b70;
+    color: var(--color-primary-600);
     text-decoration: none;
     font-weight: 500;
   }
@@ -247,39 +232,39 @@
   .wiki-detail-content a:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-color: #9ec2db;
+    text-decoration-color: var(--color-primary-200);
   }
 
   /* Deprecated banner */
   .wiki-detail-content .deprecated-banner {
     background: #fef2f2;
-    border: 1px solid #dc2626;
+    border: 1px solid var(--color-danger-text);
     border-radius: 10px;
     padding: 0.75rem 1rem;
     margin: 1rem 0;
-    color: #dc2626;
+    color: var(--color-danger-text);
     font-weight: 600;
     font-size: 0.85rem;
   }
 
   /* Required / Optional labels */
   .wiki-detail-content .required {
-    color: #dc2626;
+    color: var(--color-danger-text);
     font-weight: 600;
     font-size: 0.7rem;
     text-transform: uppercase;
   }
 
   .wiki-detail-content .optional {
-    color: #94a3b8;
+    color: var(--color-text-disabled);
     font-size: 0.7rem;
     text-transform: uppercase;
   }
 
   /* Table of contents */
   .wiki-detail-content .toc {
-    background: #f8fafc;
-    border: 1px solid #d1e5f2;
+    background: var(--color-neutral-50);
+    border: 1px solid var(--color-primary-100);
     border-radius: 12px;
     padding: 1rem 1.25rem;
     margin: 1rem 0;
@@ -323,19 +308,19 @@
   }
 
   .wiki-detail-content .btn-primary:hover {
-    background: #124b70;
+    background: var(--color-primary-600);
     transform: translateY(-1px);
     text-decoration: none;
   }
 
   .wiki-detail-content .btn-outline {
-    border: 1px solid #d1e5f2;
-    color: #334155;
+    border: 1px solid var(--color-primary-100);
+    color: var(--color-neutral-800);
     background: #ffffff;
   }
 
   .wiki-detail-content .btn-outline:hover {
-    background: #e9f3f9;
+    background: var(--color-primary-50);
     text-decoration: none;
   }
 
@@ -345,7 +330,7 @@
   }
 
   .wiki-detail-content table.schema-table thead tr {
-    background: #032845;
+    background: var(--color-primary-800);
   }
 
   /* Section spacing */

@@ -69,7 +69,9 @@ const defaultJsonLd = {
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=7">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=7">
   <link rel="manifest" href="/site.webmanifest?v=7">
-  <meta name="theme-color" content="var(--color-primary-700)">
+  <!-- theme-color 由浏览器消费，不经过 CSS —— 写 var() 等于没写（浏览器视作非法值直接忽略）。
+       本站此前就是 var(--color-primary-700)，实际效果是「没有 theme-color」。必须写字面量。 -->
+    <meta name="theme-color" content="#003153">
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical.href} />
