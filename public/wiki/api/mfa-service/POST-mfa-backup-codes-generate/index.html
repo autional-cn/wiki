@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,63 +138,56 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="active">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="active">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"mfa-service/">MFA Service</a><span>›</span><span>POST /mfa/backup-codes/generate</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/mfa-service/">MFA Service</a><span>›</span><span>POST /mfa/backup-codes/generate</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/mfa/backup-codes/generate</code></h1>
 <p class="summary">为用户生成10个备用恢复码，用于TOTP不可用时进行身份验证。恢复码仅显示一次，请妥善保存。参考：RFC 6238 (TOTP)、OWASP ASVS V2.8.3。</p>
 <div class="meta"><span class="meta-item">多因素认证</span> <span class="meta-item auth authenticated">`bearerAuth`</span> <span class="meta-item">application/json</span></div>
 <section><h2>Request Body</h2>
-<p><strong>Schema:</strong> <a href="#schema-dto.generatebackupcodesrequest"><code>dto.GenerateBackupCodesRequest</code></a></p>
-<div id="schema-dto.generatebackupcodesrequest">
+<p><strong>Schema:</strong> <a href="#schema-gitee_com_autional_service-mfa_internal_handler_dto.generatebackupcodesrequest"><code>gitee_com_autional_service-mfa_internal_handler_dto.GenerateBackupCodesRequest</code></a></p>
+<div id="schema-gitee_com_autional_service-mfa_internal_handler_dto.generatebackupcodesrequest">
 <p>Type: <code>object</code></p>
 </div>
 </section>
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>备用码生成成功</td><td><a href="#schema-dto.backupcodesdetailresponse"><code>dto.BackupCodesDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>参数错误</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>备用码生成成功</td><td><a href="#schema-gitee_com_autional_service-mfa_internal_handler_dto.backupcodesdetailresponse"><code>gitee_com_autional_service-mfa_internal_handler_dto.BackupCodesDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>参数错误</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.backupcodesdetailresponse">dto.BackupCodesDetailResponse</h3>
+<h3 id="schema-gitee_com_autional_service-core_base_dto.simpleresponse">gitee_com_autional_service-core_base_dto.SimpleResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
     <td><code>code</code></td>
     <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>data</code></td>
-    <td><a href="#schema-dto.backupcodesresponse"><code>dto.BackupCodesResponse</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -215,7 +208,40 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.backupcodesresponse">dto.BackupCodesResponse</h3>
+<h3 id="schema-gitee_com_autional_service-mfa_internal_handler_dto.backupcodesdetailresponse">gitee_com_autional_service-mfa_internal_handler_dto.BackupCodesDetailResponse</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>code</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>data</code></td>
+    <td><a href="#schema-gitee_com_autional_service-mfa_internal_handler_dto.backupcodesresponse"><code>gitee_com_autional_service-mfa_internal_handler_dto.BackupCodesResponse</code></a></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>message</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-mfa_internal_handler_dto.backupcodesresponse">gitee_com_autional_service-mfa_internal_handler_dto.BackupCodesResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -230,32 +256,6 @@
     <td><code>string</code></td>
     <td><span class="optional">No</span></td>
     <td><code>Store these backup codes securely</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-gitee_com_linmes_authms_base_dto.simpleresponse">gitee_com_linmes_authms_base_dto.SimpleResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
     <td style="font-size:11px"></td>
     <td></td>
   </tr></tbody>

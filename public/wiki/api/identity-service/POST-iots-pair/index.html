@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,40 +138,40 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="active">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="active">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"identity-service/">Identity Service</a><span>›</span><span>POST /iots/pair</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/identity-service/">Identity Service</a><span>›</span><span>POST /iots/pair</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/iots/pair</code></h1>
 <p class="summary">通过 user_code 配对 Non-Human Identity (NHI) IoT Device</p>
 <div class="meta"><span class="meta-item">IoTs</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
 <section><h2>Request Body</h2>
-<p><strong>Schema:</strong> <a href="#schema-domain.pairdevicerequest"><code>domain.PairDeviceRequest</code></a></p>
-<div id="schema-domain.pairdevicerequest">
+<p><strong>Schema:</strong> <a href="#schema-device_domain.pairdevicerequest"><code>device_domain.PairDeviceRequest</code></a></p>
+<div id="schema-device_domain.pairdevicerequest">
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -188,44 +188,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>配对后的 Device</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.dataresponse-gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain_deviceinfo"><code>gitee_com_linmes_authms_base_dto.DataResponse-gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain_DeviceInfo</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>配对后的 Device</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.dataresponse-device_domain_deviceinfo"><code>gitee_com_autional_service-core_base_dto.DataResponse-device_domain_DeviceInfo</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-gitee_com_linmes_authms_base_dto.dataresponse-gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain_deviceinfo">gitee_com_linmes_authms_base_dto.DataResponse-gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain_DeviceInfo</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>data</code></td>
-    <td><a href="#schema-gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain.deviceinfo"><code>gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain.DeviceInfo</code></a></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain.deviceinfo">gitee_com_linmes_authms_micro-services_identity-service_internal_device_domain.DeviceInfo</h3>
+<h3 id="schema-device_domain.deviceinfo">device_domain.DeviceInfo</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -278,6 +245,13 @@
     <td style="font-size:11px"></td>
     <td></td>
   </tr><tr>
+    <td><code>owner_principal_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>OwnerPrincipalID additive（json omitempty）；保留 OwnerID 以向后兼容（C-4）。</td>
+  </tr><tr>
     <td><code>pairing_code</code></td>
     <td><code>string</code></td>
     <td><span class="optional">No</span></td>
@@ -300,6 +274,39 @@
     <td></td>
   </tr><tr>
     <td><code>workload_subtype</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-core_base_dto.dataresponse-device_domain_deviceinfo">gitee_com_autional_service-core_base_dto.DataResponse-device_domain_DeviceInfo</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>code</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>data</code></td>
+    <td><a href="#schema-device_domain.deviceinfo"><code>device_domain.DeviceInfo</code></a></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>message</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
     <td><code>string</code></td>
     <td><span class="optional">No</span></td>
     <td></td>

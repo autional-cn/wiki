@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,55 +138,55 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="active">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="active">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><span>SAML Service</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><span>SAML Service</span></nav>
       <h1>SAML Service</h1>
-<p class="summary">Port 11021 &middot; 17 endpoints &middot; <code>micro-services/saml-service/</code></p>
+<p class="summary">Port 11021 &middot; 17 endpoints &middot; <code>docker/specs/saml-service/</code></p>
 <h2 id="tag-saml">SAML</h2>
 <table>
   <thead><tr><th>Method</th><th>Path</th><th>Summary</th><th></th></tr></thead>
-  <tbody><tr><td><span class="meta-item method POST">POST</span></td><td><code>/saml/{provider_id}/acs</code></td><td>断言消费服务</td><td><a href="/"saml-service/POST-saml-provider_id-acs/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/login</code></td><td>SP-initiated SSO</td><td><a href="/"saml-service/GET-saml-provider_id-login/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/metadata</code></td><td>获取SP元数据</td><td><a href="/"saml-service/GET-saml-provider_id-metadata/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/slo</code></td><td>单点登出</td><td><a href="/"saml-service/GET-saml-provider_id-slo/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/slo/sp</code></td><td>SP发起的SAML单点登出</td><td><a href="/"saml-service/GET-saml-provider_id-slo-sp/">detail →</a></td></tr></tbody>
+  <tbody><tr><td><span class="meta-item method POST">POST</span></td><td><code>/saml/{provider_id}/acs</code></td><td>断言消费服务</td><td><a href="/saml-service/POST-saml-provider_id-acs/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/login</code></td><td>SP-initiated SSO</td><td><a href="/saml-service/GET-saml-provider_id-login/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/metadata</code></td><td>获取SP元数据</td><td><a href="/saml-service/GET-saml-provider_id-metadata/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/slo</code></td><td>单点登出</td><td><a href="/saml-service/GET-saml-provider_id-slo/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/saml/{provider_id}/slo/sp</code></td><td>SP发起的SAML单点登出</td><td><a href="/saml-service/GET-saml-provider_id-slo-sp/">detail →</a></td></tr></tbody>
 </table>
 <h2 id="tag-saml - admin">SAML - Admin</h2>
 <table>
   <thead><tr><th>Method</th><th>Path</th><th>Summary</th><th></th></tr></thead>
-  <tbody><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/sessions</code></td><td>查询SAML会话列表（管理端）</td><td><a href="/"saml-service/GET-admin-saml-sessions/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/user-links</code></td><td>查询用户SAML绑定列表（管理端）</td><td><a href="/"saml-service/GET-admin-saml-user-links/">detail →</a></td></tr><tr><td><span class="meta-item method DELETE">DELETE</span></td><td><code>/admin/saml/user-links/{user_link_id}</code></td><td>删除用户SAML绑定（管理端）</td><td><a href="/"saml-service/DELETE-admin-saml-user-links-user_link_id/">detail →</a></td></tr></tbody>
+  <tbody><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/sessions</code></td><td>查询SAML会话列表（管理端）</td><td><a href="/saml-service/GET-admin-saml-sessions/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/user-links</code></td><td>查询用户SAML绑定列表（管理端）</td><td><a href="/saml-service/GET-admin-saml-user-links/">detail →</a></td></tr><tr><td><span class="meta-item method DELETE">DELETE</span></td><td><code>/admin/saml/user-links/{user_link_id}</code></td><td>删除用户SAML绑定（管理端）</td><td><a href="/saml-service/DELETE-admin-saml-user-links-user_link_id/">detail →</a></td></tr></tbody>
 </table>
 <h2 id="tag-saml - 内部接口">SAML - 内部接口</h2>
 <table>
   <thead><tr><th>Method</th><th>Path</th><th>Summary</th><th></th></tr></thead>
-  <tbody><tr><td><span class="meta-item method POST">POST</span></td><td><code>/internal/saml/erase-user-links</code></td><td>擦除用户SAML绑定</td><td><a href="/"saml-service/POST-internal-saml-erase-user-links/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/internal/saml/user-links</code></td><td>查询用户SAML绑定列表</td><td><a href="/"saml-service/GET-internal-saml-user-links/">detail →</a></td></tr><tr><td><span class="meta-item method DELETE">DELETE</span></td><td><code>/internal/saml/user-links/{user_link_id}</code></td><td>删除用户SAML绑定</td><td><a href="/"saml-service/DELETE-internal-saml-user-links-user_link_id/">detail →</a></td></tr></tbody>
+  <tbody><tr><td><span class="meta-item method POST">POST</span></td><td><code>/internal/saml/erase-user-links</code></td><td>擦除用户SAML绑定</td><td><a href="/saml-service/POST-internal-saml-erase-user-links/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/internal/saml/user-links</code></td><td>查询用户SAML绑定列表</td><td><a href="/saml-service/GET-internal-saml-user-links/">detail →</a></td></tr><tr><td><span class="meta-item method DELETE">DELETE</span></td><td><code>/internal/saml/user-links/{user_link_id}</code></td><td>删除用户SAML绑定</td><td><a href="/saml-service/DELETE-internal-saml-user-links-user_link_id/">detail →</a></td></tr></tbody>
 </table>
 <h2 id="tag-saml 管理">SAML 管理</h2>
 <table>
   <thead><tr><th>Method</th><th>Path</th><th>Summary</th><th></th></tr></thead>
-  <tbody><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/providers</code></td><td>列出SAML IdP</td><td><a href="/"saml-service/GET-admin-saml-providers/">detail →</a></td></tr><tr><td><span class="meta-item method POST">POST</span></td><td><code>/admin/saml/providers</code></td><td>注册SAML IdP</td><td><a href="/"saml-service/POST-admin-saml-providers/">detail →</a></td></tr><tr><td><span class="meta-item method DELETE">DELETE</span></td><td><code>/admin/saml/providers/{provider_id}</code></td><td>删除SAML IdP</td><td><a href="/"saml-service/DELETE-admin-saml-providers-provider_id/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/providers/{provider_id}</code></td><td>获取SAML IdP详情</td><td><a href="/"saml-service/GET-admin-saml-providers-provider_id/">detail →</a></td></tr><tr><td><span class="meta-item method PUT">PUT</span></td><td><code>/admin/saml/providers/{provider_id}</code></td><td>更新SAML IdP</td><td><a href="/"saml-service/PUT-admin-saml-providers-provider_id/">detail →</a></td></tr><tr><td><span class="meta-item method PUT">PUT</span></td><td><code>/admin/saml/providers/{provider_id}/attribute-mapping</code></td><td>更新属性映射</td><td><a href="/"saml-service/PUT-admin-saml-providers-provider_id-attribute-mapping/">detail →</a></td></tr></tbody>
+  <tbody><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/providers</code></td><td>列出SAML IdP</td><td><a href="/saml-service/GET-admin-saml-providers/">detail →</a></td></tr><tr><td><span class="meta-item method POST">POST</span></td><td><code>/admin/saml/providers</code></td><td>注册SAML IdP</td><td><a href="/saml-service/POST-admin-saml-providers/">detail →</a></td></tr><tr><td><span class="meta-item method DELETE">DELETE</span></td><td><code>/admin/saml/providers/{provider_id}</code></td><td>删除SAML IdP</td><td><a href="/saml-service/DELETE-admin-saml-providers-provider_id/">detail →</a></td></tr><tr><td><span class="meta-item method GET">GET</span></td><td><code>/admin/saml/providers/{provider_id}</code></td><td>获取SAML IdP详情</td><td><a href="/saml-service/GET-admin-saml-providers-provider_id/">detail →</a></td></tr><tr><td><span class="meta-item method PUT">PUT</span></td><td><code>/admin/saml/providers/{provider_id}</code></td><td>更新SAML IdP</td><td><a href="/saml-service/PUT-admin-saml-providers-provider_id/">detail →</a></td></tr><tr><td><span class="meta-item method PUT">PUT</span></td><td><code>/admin/saml/providers/{provider_id}/attribute-mapping</code></td><td>更新属性映射</td><td><a href="/saml-service/PUT-admin-saml-providers-provider_id-attribute-mapping/">detail →</a></td></tr></tbody>
 </table>
       <footer>
         Generated from OpenAPI specs. <a href="https://reference.autional.cn/">Interactive API explorer (Scalar)</a>

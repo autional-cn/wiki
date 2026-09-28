@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,34 +138,34 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="active">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="active">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"oauth-service/">OAuth Service</a><span>›</span><span>GET /oauth/authorize</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/oauth-service/">OAuth Service</a><span>›</span><span>GET /oauth/authorize</span></nav>
       <h1><span class="meta-item method GET">GET</span> <code class="path">/oauth/authorize</code></h1>
 <p class="summary">OAuth 2.0 授权端点。提供 redirect_uri 时返回 302 重定向；未提供时返回 JSON 授权码。支持 PKCE 和 PAR（通过 request_uri）。参考：RFC 6749 §4.1.1-4.1.2.1 (Authorization Code Grant)、RFC 7636 (PKCE)、RFC 9126 (PAR)、OAuth 2.1 可选 iss 参数。</p>
 <div class="meta"><span class="meta-item">OAuth</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
@@ -277,11 +277,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>授权码（无 redirect_uri 时）</td><td><a href="#schema-handler.authorizecoderesponse"><code>handler.authorizeCodeResponse</code></a></td></tr><tr><td><strong>302</strong></td><td>重定向到回调URL并附带 OAuth 错误（invalid_request/invalid_client/unsupported_response_type）</td><td><code>string</code></td></tr><tr><td><strong>400</strong></td><td>invalid_request_uri：PAR 请求无效/过期/已使用。参考：RFC 9126。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：授权服务器内部错误。参考：RFC 6749 §5.2。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>授权码（无 redirect_uri 时）</td><td><a href="#schema-handler.authorizecoderesponse"><code>handler.authorizeCodeResponse</code></a></td></tr><tr><td><strong>302</strong></td><td>重定向到回调URL并附带 OAuth 错误（invalid_request/invalid_client/unsupported_response_type）</td><td><code>string</code></td></tr><tr><td><strong>400</strong></td><td>invalid_request_uri：PAR 请求无效/过期/已使用。参考：RFC 9126。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：授权服务器内部错误。参考：RFC 6749 §5.2。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.oautherrorresponse">dto.OAuthErrorResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse">gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</h3>
 <p>OAuth标准错误响应</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>

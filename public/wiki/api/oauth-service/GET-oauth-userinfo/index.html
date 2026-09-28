@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,34 +138,34 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="active">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="active">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"oauth-service/">OAuth Service</a><span>›</span><span>GET /oauth/userinfo</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/oauth-service/">OAuth Service</a><span>›</span><span>GET /oauth/userinfo</span></nav>
       <h1><span class="meta-item method GET">GET</span> <code class="path">/oauth/userinfo</code></h1>
 <p class="summary">OpenID Connect UserInfo 端点。使用 Bearer Token 认证，返回扁平 UserInfo JSON（无 code/message 信封）。当 scope 包含 &quot;profile&quot; 时，从 profile-service 查询用户资料并合并到响应中。当配置了 verification-service 时，额外查询年龄分组/未成年人状态。参考：OpenID Connect Core 1.0 §5.3 (UserInfo Endpoint)。</p>
 <div class="meta"><span class="meta-item">OAuth</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
@@ -187,11 +187,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>UserInfo 响应（含 sub, name, email, picture 等 OIDC 标准声明）</td><td><a href="#schema-dto.oidcuserinforesponse"><code>dto.OIDCUserInfoResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>invalid_token：Token 无效或已过期。参考：OIDC Core §5.3。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>UserInfo 响应（含 sub, name, email, picture 等 OIDC 标准声明）</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oidcuserinforesponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OIDCUserInfoResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>invalid_token：Token 无效或已过期。参考：OIDC Core §5.3。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.oautherrorresponse">dto.OAuthErrorResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse">gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</h3>
 <p>OAuth标准错误响应</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -225,7 +225,7 @@
     <td>状态</td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.oidcuserinforesponse">dto.OIDCUserInfoResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oidcuserinforesponse">gitee_com_autional_service-oauth_internal_handler_dto.OIDCUserInfoResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>

@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,41 +138,41 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="active">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="active">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"storage-service/">Storage Service</a><span>›</span><span>GET /admin/storage/stats</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/storage-service/">Storage Service</a><span>›</span><span>GET /admin/storage/stats</span></nav>
       <h1><span class="meta-item method GET">GET</span> <code class="path">/admin/storage/stats</code></h1>
 <p class="summary">获取当前租户的存储使用统计，包括文件数量、总大小、按MIME类型分布等管理数据。参考：GDPR Art 32 (Security of Processing)。</p>
 <div class="meta"><span class="meta-item">存储服务</span> <span class="meta-item auth authenticated">`bearerAuth`</span> <span class="meta-item">application/json</span></div>
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>存储统计信息（总文件数、总大小、MIME类型分布）</td><td><a href="#schema-dto.storagestatsdetailresponse"><code>dto.StorageStatsDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>参数验证失败</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌已过期</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>403</strong></td><td>权限不足，需要管理员角色</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>租户数据不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>存储统计信息（总文件数、总大小、MIME类型分布）</td><td><a href="#schema-handler_dto.storagestatsdetailresponse"><code>handler_dto.StorageStatsDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>参数验证失败</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌已过期</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>403</strong></td><td>权限不足，需要管理员角色</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>租户数据不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
@@ -220,32 +220,6 @@
     <td style="font-size:11px"></td>
     <td>Value 是导致错误的值（可选，开发模式下使用）
 生产环境可能不返回此字段以避免泄露敏感信息</td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.mimetypestat">dto.MimeTypeStat</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>count</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1500</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>mime_type</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>image/png</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>size</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>536870912</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
   </tr></tbody>
 </table>
 <h3 id="schema-dto.problem">dto.Problem</h3>
@@ -383,7 +357,33 @@ ISO 8601 格式
 示例：&quot;https://api.example.com/errors/invalid-request&quot;</td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.storagestatsdetailresponse">dto.StorageStatsDetailResponse</h3>
+<h3 id="schema-handler_dto.mimetypestat">handler_dto.MimeTypeStat</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>count</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1500</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>mime_type</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>image/png</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>size</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>536870912</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-handler_dto.storagestatsdetailresponse">handler_dto.StorageStatsDetailResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -395,7 +395,7 @@ ISO 8601 格式
     <td></td>
   </tr><tr>
     <td><code>data</code></td>
-    <td><a href="#schema-dto.storagestatsresponse"><code>dto.StorageStatsResponse</code></a></td>
+    <td><a href="#schema-handler_dto.storagestatsresponse"><code>handler_dto.StorageStatsResponse</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -416,13 +416,13 @@ ISO 8601 格式
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.storagestatsresponse">dto.StorageStatsResponse</h3>
+<h3 id="schema-handler_dto.storagestatsresponse">handler_dto.StorageStatsResponse</h3>
 <p>存储使用统计</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
     <td><code>mime_types</code></td>
-    <td>array of<br/><p>See <a href="#schema-dto.mimetypestat"><code>dto.MimeTypeStat</code></a></p></td>
+    <td>array of<br/><p>See <a href="#schema-handler_dto.mimetypestat"><code>handler_dto.MimeTypeStat</code></a></p></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>

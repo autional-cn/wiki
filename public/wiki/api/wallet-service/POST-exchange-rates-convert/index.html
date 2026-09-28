@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,40 +138,40 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="active">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="active">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"wallet-service/">Wallet Service</a><span>›</span><span>POST /exchange-rates/convert</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/wallet-service/">Wallet Service</a><span>›</span><span>POST /exchange-rates/convert</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/exchange-rates/convert</code></h1>
 <p class="summary">使用报价ID执行币种兑换。参考：GAAP/IFRS (Double-Entry Accounting Principles)。quote_id在60秒内有效，兑换后即失效防止重放。</p>
 <div class="meta"><span class="meta-item">钱包服务</span> <span class="meta-item auth authenticated">`bearerAuth`</span> <span class="meta-item">application/json</span></div>
 <section><h2>Request Body</h2>
-<p><strong>Schema:</strong> <a href="#schema-dto.exchangeconvertrequest"><code>dto.ExchangeConvertRequest</code></a></p>
-<div id="schema-dto.exchangeconvertrequest">
+<p><strong>Schema:</strong> <a href="#schema-gitee_com_autional_service-wallet_internal_handler_dto.exchangeconvertrequest"><code>gitee_com_autional_service-wallet_internal_handler_dto.ExchangeConvertRequest</code></a></p>
+<div id="schema-gitee_com_autional_service-wallet_internal_handler_dto.exchangeconvertrequest">
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -202,11 +202,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>兑换结果</td><td><a href="#schema-dto.dataresponse-dto_exchangeconvertresponse"><code>dto.DataResponse-dto_ExchangeConvertResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数错误</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌无效</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>409</strong></td><td>报价已过期或重复使用</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>422</strong></td><td>兑换金额无效</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>服务内部错误</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>兑换结果</td><td><a href="#schema-dto.dataresponse-gitee_com_autional_service-wallet_internal_handler_dto_exchangeconvertresponse"><code>dto.DataResponse-gitee_com_autional_service-wallet_internal_handler_dto_ExchangeConvertResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数错误</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌无效</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>409</strong></td><td>报价已过期或重复使用</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>422</strong></td><td>兑换金额无效</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>服务内部错误</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.dataresponse-dto_exchangeconvertresponse">dto.DataResponse-dto_ExchangeConvertResponse</h3>
+<h3 id="schema-dto.dataresponse-gitee_com_autional_service-wallet_internal_handler_dto_exchangeconvertresponse">dto.DataResponse-gitee_com_autional_service-wallet_internal_handler_dto_ExchangeConvertResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -218,7 +218,7 @@
     <td></td>
   </tr><tr>
     <td><code>data</code></td>
-    <td><a href="#schema-dto.exchangeconvertresponse"><code>dto.ExchangeConvertResponse</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-wallet_internal_handler_dto.exchangeconvertresponse"><code>gitee_com_autional_service-wallet_internal_handler_dto.ExchangeConvertResponse</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -239,7 +239,33 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.exchangeconvertresponse">dto.ExchangeConvertResponse</h3>
+<h3 id="schema-gitee_com_autional_service-core_base_dto.simpleresponse">gitee_com_autional_service-core_base_dto.SimpleResponse</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>code</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>message</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-wallet_internal_handler_dto.exchangeconvertresponse">gitee_com_autional_service-wallet_internal_handler_dto.ExchangeConvertResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -296,32 +322,6 @@
     <td><code>string</code></td>
     <td><span class="optional">No</span></td>
     <td><code>txn_001</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-gitee_com_linmes_authms_base_dto.simpleresponse">gitee_com_linmes_authms_base_dto.SimpleResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
     <td style="font-size:11px"></td>
     <td></td>
   </tr></tbody>

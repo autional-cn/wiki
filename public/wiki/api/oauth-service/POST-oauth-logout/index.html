@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POST /oauth/logout — OAuth Service API | Autional</title>
-  <meta name="description" content="OIDC Session Management 1.0 RP-Initiated Logout。接受 id_token_hint（推荐）、post_logout_redirect_uri（可选）、state（可选）。">
+  <meta name="description" content="OIDC RP-Initiated Logout 1.0。id_token_hint 必须为本服务 RSA 验签有效（含 iss 校验）；未携带 id_token_hint 时要求已认证会话（Bearer access token）；post_logout_redirect_uri 仅在命中客户端注册 URI 时精确匹配跳转，否则回退 JSON 响应。">
   <meta name="robots" content="index, follow">
   <meta name="language" content="zh-CN">
   <meta name="docsearch:language" content="zh-CN">
@@ -13,15 +13,15 @@
   <link rel="alternate" hreflang="x-default" href="https://wiki.autional.cn/oauth-service/POST-oauth-logout/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFkNGVkOCIvPjx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC1zaXplPSIxOCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSIgZm9udC13ZWlnaHQ9IjcwMCI+QTwvdGV4dD48L3N2Zz4=">
   <meta property="og:title" content="POST /oauth/logout — OAuth Service API | Autional">
-  <meta property="og:description" content="OIDC Session Management 1.0 RP-Initiated Logout。接受 id_token_hint（推荐）、post_logout_redirect_uri（可选）、state（可选）。">
+  <meta property="og:description" content="OIDC RP-Initiated Logout 1.0。id_token_hint 必须为本服务 RSA 验签有效（含 iss 校验）；未携带 id_token_hint 时要求已认证会话（Bearer access token）；post_logout_redirect_uri 仅在命中客户端注册 URI 时精确匹配跳转，否则回退 JSON 响应。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wiki.autional.cn/oauth-service/POST-oauth-logout/">
   <meta property="og:site_name" content="Autional API Wiki">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="POST /oauth/logout — OAuth Service API | Autional">
-  <meta name="twitter:description" content="OIDC Session Management 1.0 RP-Initiated Logout。接受 id_token_hint（推荐）、post_logout_redirect_uri（可选）、state（可选）。">
+  <meta name="twitter:description" content="OIDC RP-Initiated Logout 1.0。id_token_hint 必须为本服务 RSA 验签有效（含 iss 校验）；未携带 id_token_hint 时要求已认证会话（Bearer access token）；post_logout_redirect_uri 仅在命中客户端注册 URI 时精确匹配跳转，否则回退 JSON 响应。">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Docs", "item": "https://wiki.autional.cn/"}, {"@type": "ListItem", "position": 2, "name": "API Reference", "item": "https://wiki.autional.cn/"}, {"@type": "ListItem", "position": 3, "name": "OAuth Service", "item": "https://wiki.autional.cn/oauth-service/"}, {"@type": "ListItem", "position": 4, "name": "POST /oauth/logout"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "POST /oauth/logout — OAuth Service API | Autional", "description": "OIDC Session Management 1.0 RP-Initiated Logout。接受 id_token_hint（推荐）、post_logout_redirect_uri（可选）、state（可选）。", "about": {"@type": "SoftwareApplication", "name": "Autional"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "POST /oauth/logout — OAuth Service API | Autional", "description": "OIDC RP-Initiated Logout 1.0。id_token_hint 必须为本服务 RSA 验签有效（含 iss 校验）；未携带 id_token_hint 时要求已认证会话（Bearer access token）；post_logout_redirect_uri 仅在命中客户端注册 URI 时精确匹配跳转，否则回退 JSON 响应。", "about": {"@type": "SoftwareApplication", "name": "Autional"}}</script>
   <style>  html{visibility:visible;opacity:1}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{
@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,36 +138,36 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="active">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="active">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"oauth-service/">OAuth Service</a><span>›</span><span>POST /oauth/logout</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/oauth-service/">OAuth Service</a><span>›</span><span>POST /oauth/logout</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/oauth/logout</code></h1>
-<p class="summary">OIDC Session Management 1.0 RP-Initiated Logout。接受 id_token_hint（推荐）、post_logout_redirect_uri（可选）、state（可选）。</p>
+<p class="summary">OIDC RP-Initiated Logout 1.0。id_token_hint 必须为本服务 RSA 验签有效（含 iss 校验）；未携带 id_token_hint 时要求已认证会话（Bearer access token）；post_logout_redirect_uri 仅在命中客户端注册 URI 时精确匹配跳转，否则回退 JSON 响应。</p>
 <div class="meta"><span class="meta-item">OAuth</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
 <section><h2>Request Parameters</h2>
 <table>
@@ -180,7 +180,7 @@
     <td></td>
     <td></td>
     <td style="font-size:11px"></td>
-    <td>ID Token 提示，用于定位并吊销用户会话 token</td>
+    <td>ID Token 提示（须为本服务签发且未过期，验签 + iss 校验）</td>
   </tr><tr>
     <td><code>post_logout_redirect_uri</code></td>
     <td><code>query</code></td>
@@ -189,7 +189,7 @@
     <td></td>
     <td></td>
     <td style="font-size:11px"></td>
-    <td>登出后重定向地址（需在客户端注册白名单内）</td>
+    <td>登出后重定向地址（精确匹配客户端注册 URI 白名单，否则忽略）</td>
   </tr><tr>
     <td><code>state</code></td>
     <td><code>query</code></td>
@@ -198,18 +198,27 @@
     <td></td>
     <td></td>
     <td style="font-size:11px"></td>
-    <td>状态参数，随重定向原样返回</td>
+    <td>状态参数，随重定向原样返回（URL 转义）</td>
+  </tr><tr>
+    <td><code>client_id</code></td>
+    <td><code>query</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>无 id_token_hint 的已认证会话登出时的客户端标识（用于重定向白名单校验）</td>
   </tr></tbody>
 </table>
 </section>
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>登出成功</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>302</strong></td><td>重定向到 post_logout_redirect_uri</td><td><a href="#schema-gitee_com_linmes_authms_base_dto.simpleresponse"><code>gitee_com_linmes_authms_base_dto.SimpleResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>登出成功</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>302</strong></td><td>重定向到已注册的 post_logout_redirect_uri</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>invalid_request：id_token_hint 无效（验签/iss/过期/缺 sub）</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>invalid_request：无有效 id_token_hint 且无已认证会话</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>403</strong></td><td>access_denied：id_token_hint 主体与当前会话用户不一致</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-gitee_com_linmes_authms_base_dto.simpleresponse">gitee_com_linmes_authms_base_dto.SimpleResponse</h3>
+<h3 id="schema-gitee_com_autional_service-core_base_dto.simpleresponse">gitee_com_autional_service-core_base_dto.SimpleResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -233,6 +242,40 @@
     <td></td>
     <td style="font-size:11px"></td>
     <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse">gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</h3>
+<p>OAuth标准错误响应</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>error</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>invalid_request</code></td>
+    <td style="font-size:11px"></td>
+    <td>错误码</td>
+  </tr><tr>
+    <td><code>error_description</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>Missing required parameter</code></td>
+    <td style="font-size:11px"></td>
+    <td>错误描述</td>
+  </tr><tr>
+    <td><code>error_uri</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>https://docs.example.com/errors</code></td>
+    <td style="font-size:11px"></td>
+    <td>错误URI</td>
+  </tr><tr>
+    <td><code>state</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>state-123</code></td>
+    <td style="font-size:11px"></td>
+    <td>状态</td>
   </tr></tbody>
 </table>
 </section>

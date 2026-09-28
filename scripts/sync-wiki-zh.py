@@ -45,9 +45,14 @@ REPLACEMENTS = [
     ("AuthMS", "Autional"),
     # The generator emits legacy `/api/...` paths; the portal serves the same
     # pages at clean root paths (see src/pages/[service].astro, [...slug].astro).
-    ('href="/api/', 'href="/"'),
+    ('href="/api/', 'href="/'),
     ("https://wiki.autional.cn/api/", "https://wiki.autional.cn/"),
 ]
+
+
+# A quote right after `href="/` means a replacement ate the closing quote and
+# left the rest of the URL as stray text (see the `href="/api/` rule above).
+MALFORMED_HREF = re.compile(r'href="/"[A-Za-z]')
 
 
 def normalize(content: str) -> str:
@@ -87,9 +92,12 @@ def main() -> int:
             src = os.path.join(root, name)
             dst = os.path.join(dst_dir, name)
             with open(src, encoding="utf-8") as fh:
-                content = fh.read()
+                content = normalize(fh.read())
+            if MALFORMED_HREF.search(content):
+                print(f"ERROR: malformed href remains after normalization: {src}")
+                return 1
             with open(dst, "w", encoding="utf-8", newline="") as fh:
-                fh.write(normalize(content))
+                fh.write(content)
             written.add(os.path.normcase(os.path.normpath(dst)))
             copied += 1
 

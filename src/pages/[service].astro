@@ -40,9 +40,9 @@ try {
     if (bodyMatch) endpointHtml = bodyMatch[1];
   }
 
-  // Count endpoint rows for the header
-  const rowMatches = endpointHtml.match(/<tr>/g);
-  endpointCount = rowMatches ? rowMatches.length : 0;
+  // Count unique endpoint detail links; an endpoint may repeat across tag sections.
+  const detailLinks = endpointHtml.match(/href="\/[^"]+\/[A-Z]+-[^"]*"/g) ?? [];
+  endpointCount = new Set(detailLinks).size;
 
   const jsonLdRe = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
   let m;

@@ -133,7 +133,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -141,34 +141,34 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="active">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="active">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"session-service/">Session Service</a><span>›</span><span>GET /admin/devices/{device_id}/risk</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/session-service/">Session Service</a><span>›</span><span>GET /admin/devices/{device_id}/risk</span></nav>
       <h1><span class="meta-item method GET">GET</span> <code class="path">/admin/devices/{device_id}/risk</code></h1>
 <p class="summary">管理员基于设备关联的所有会话历史（登录次数、撤销数、活跃会话数）评估设备风险评分。
 参考：RFC 7519 (JWT)、NIST SP 800-63B §4 (Session Management)。</p>
@@ -191,78 +191,10 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>设备风险评分及风险因素</td><td><a href="#schema-dto.deviceriskresponse"><code>dto.DeviceRiskResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数有误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌已过期</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>403</strong></td><td>无管理员或安全管理员权限</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>设备不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>设备风险评分及风险因素</td><td><a href="#schema-gitee_com_autional_service-session_internal_handler_dto.deviceriskresponse"><code>gitee_com_autional_service-session_internal_handler_dto.DeviceRiskResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数有误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌已过期</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>403</strong></td><td>无管理员或安全管理员权限</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>设备不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.deviceriskresponse">dto.DeviceRiskResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>active_sessions</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>3</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>audit_failure_count</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>0</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>device_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>dev_01ARZ3NDEKTSV4RRFFQ69G5FAV</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>evaluated_at</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>2026-04-15T10:30:00Z</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>revoked_sessions</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>2</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>risk_factors</code></td>
-    <td>array of<br/><p><strong>string</strong></p></td>
-    <td><span class="optional">No</span></td>
-    <td><code>['[&quot;unusual_location&quot;', '&quot;new_device&quot;]']</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>risk_level</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>low</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>risk_score</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>35</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>total_sessions</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>15</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
 <h3 id="schema-dto.fieldviolation">dto.FieldViolation</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -442,6 +374,74 @@ ISO 8601 格式
     <td>Type 是标识问题类型的URI引用
 当该URI被解引用时，应提供人类可读的文档
 示例：&quot;https://api.example.com/errors/invalid-request&quot;</td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-session_internal_handler_dto.deviceriskresponse">gitee_com_autional_service-session_internal_handler_dto.DeviceRiskResponse</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>active_sessions</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>3</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>audit_failure_count</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>0</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>device_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>dev_01ARZ3NDEKTSV4RRFFQ69G5FAV</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>evaluated_at</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>2026-04-15T10:30:00Z</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>revoked_sessions</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>2</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>risk_factors</code></td>
+    <td>array of<br/><p><strong>string</strong></p></td>
+    <td><span class="optional">No</span></td>
+    <td><code>['[&quot;unusual_location&quot;', '&quot;new_device&quot;]']</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>risk_level</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>low</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>risk_score</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>35</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>total_sessions</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>15</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
   </tr></tbody>
 </table>
 </section>

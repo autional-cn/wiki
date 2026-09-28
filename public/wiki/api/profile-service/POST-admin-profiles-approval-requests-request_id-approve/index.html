@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,34 +138,34 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="active">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="active">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"profile-service/">Profile Service</a><span>›</span><span>POST /admin/profiles/approval-requests/{request_id}/approve</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/profile-service/">Profile Service</a><span>›</span><span>POST /admin/profiles/approval-requests/{request_id}/approve</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/admin/profiles/approval-requests/{request_id}/approve</code></h1>
 <p class="summary">批准指定的审批请求，执行审批对应的操作（归档/导出/删除/更正）。发布审批应用事件。管理员权限。</p>
 <div class="meta"><span class="meta-item">审批管理</span> <span class="meta-item auth authenticated">`bearerAuth`</span> <span class="meta-item">application/json</span></div>
@@ -187,90 +187,10 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>审批请求已批准，操作已执行</td><td><a href="#schema-dto.approvaldetailresponse"><code>dto.ApprovalDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数无效</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌已过期</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>403</strong></td><td>无审批管理权限</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>审批请求不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>409</strong></td><td>审批状态冲突，请求已被处理</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>422</strong></td><td>审批状态无效，当前状态不允许批准</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>审批请求已批准，操作已执行</td><td><a href="#schema-gitee_com_autional_service-profile_internal_handler_dto.approvaldetailresponse"><code>gitee_com_autional_service-profile_internal_handler_dto.ApprovalDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数无效</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证或令牌已过期</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>403</strong></td><td>无审批管理权限</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>审批请求不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>409</strong></td><td>审批状态冲突，请求已被处理</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>422</strong></td><td>审批状态无效，当前状态不允许批准</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.approvaldetailresponse">dto.ApprovalDetailResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>data</code></td>
-    <td><a href="#schema-dto.approvalresponse"><code>dto.ApprovalResponse</code></a></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.approvalresponse">dto.ApprovalResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>action</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>approved_at</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>reason</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>status</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>user_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
 <h3 id="schema-dto.fieldviolation">dto.FieldViolation</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -450,6 +370,86 @@ ISO 8601 格式
     <td>Type 是标识问题类型的URI引用
 当该URI被解引用时，应提供人类可读的文档
 示例：&quot;https://api.example.com/errors/invalid-request&quot;</td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-profile_internal_handler_dto.approvaldetailresponse">gitee_com_autional_service-profile_internal_handler_dto.ApprovalDetailResponse</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>code</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>data</code></td>
+    <td><a href="#schema-gitee_com_autional_service-profile_internal_handler_dto.approvalresponse"><code>gitee_com_autional_service-profile_internal_handler_dto.ApprovalResponse</code></a></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>message</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-profile_internal_handler_dto.approvalresponse">gitee_com_autional_service-profile_internal_handler_dto.ApprovalResponse</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>action</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>approved_at</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>reason</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>status</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>user_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
   </tr></tbody>
 </table>
 </section>

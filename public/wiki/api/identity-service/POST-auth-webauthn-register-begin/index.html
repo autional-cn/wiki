@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,34 +138,34 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="active">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="active">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"identity-service/">Identity Service</a><span>›</span><span>POST /auth/webauthn/register/begin</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/identity-service/">Identity Service</a><span>›</span><span>POST /auth/webauthn/register/begin</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/auth/webauthn/register/begin</code></h1>
 <p class="summary">生成注册挑战和凭证创建选项，返回给前端调用 navigator.credentials.create()</p>
 <div class="meta"><span class="meta-item">WebAuthn</span> <span class="meta-item auth authenticated">`bearerAuth`</span> <span class="meta-item">application/json</span></div>
@@ -202,11 +202,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>注册选项</td><td><a href="#schema-dto.webauthnregistrationresponsewrapper"><code>dto.WebAuthnRegistrationResponseWrapper</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数错误</td><td><a href="#schema-dto.simpleresponsewrapper"><code>dto.SimpleResponseWrapper</code></a></td></tr><tr><td><strong>401</strong></td><td>未授权</td><td><a href="#schema-dto.simpleresponsewrapper"><code>dto.SimpleResponseWrapper</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器错误</td><td><a href="#schema-dto.simpleresponsewrapper"><code>dto.SimpleResponseWrapper</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>注册选项</td><td><a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnregistrationresponsewrapper"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRegistrationResponseWrapper</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数错误</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>未授权</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>服务器错误</td><td><a href="#schema-gitee_com_autional_service-core_base_dto.simpleresponse"><code>gitee_com_autional_service-core_base_dto.SimpleResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.simpleresponsewrapper">dto.SimpleResponseWrapper</h3>
+<h3 id="schema-gitee_com_autional_service-core_base_dto.simpleresponse">gitee_com_autional_service-core_base_dto.SimpleResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -223,9 +223,16 @@
     <td></td>
     <td style="font-size:11px"></td>
     <td></td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthnauthenticatorselection">dto.WebAuthnAuthenticatorSelection</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnauthenticatorselection">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnAuthenticatorSelection</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -251,7 +258,7 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthncredentialparameter">dto.WebAuthnCredentialParameter</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthncredentialparameter">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnCredentialParameter</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -270,7 +277,7 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthnrpentity">dto.WebAuthnRPEntity</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnrpentity">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRPEntity</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -289,7 +296,7 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthnregistrationoptionsresponse">dto.WebAuthnRegistrationOptionsResponse</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnregistrationoptionsresponse">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRegistrationOptionsResponse</h3>
 <p>WebAuthn navigator.credentials.create() 的 publicKey 参数</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -302,7 +309,7 @@
     <td></td>
   </tr><tr>
     <td><code>authenticatorSelection</code></td>
-    <td><a href="#schema-dto.webauthnauthenticatorselection"><code>dto.WebAuthnAuthenticatorSelection</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnauthenticatorselection"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnAuthenticatorSelection</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -316,14 +323,14 @@
     <td></td>
   </tr><tr>
     <td><code>pubKeyCredParams</code></td>
-    <td>array of<br/><p>See <a href="#schema-dto.webauthncredentialparameter"><code>dto.WebAuthnCredentialParameter</code></a></p></td>
+    <td>array of<br/><p>See <a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthncredentialparameter"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnCredentialParameter</code></a></p></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
     <td></td>
   </tr><tr>
     <td><code>rp</code></td>
-    <td><a href="#schema-dto.webauthnrpentity"><code>dto.WebAuthnRPEntity</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnrpentity"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRPEntity</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -337,26 +344,26 @@
     <td></td>
   </tr><tr>
     <td><code>user</code></td>
-    <td><a href="#schema-dto.webauthnuserentity"><code>dto.WebAuthnUserEntity</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnuserentity"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnUserEntity</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthnregistrationresponse">dto.WebAuthnRegistrationResponse</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnregistrationresponse">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRegistrationResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
     <td><code>publicKey</code></td>
-    <td><a href="#schema-dto.webauthnregistrationoptionsresponse"><code>dto.WebAuthnRegistrationOptionsResponse</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnregistrationoptionsresponse"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRegistrationOptionsResponse</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthnregistrationresponsewrapper">dto.WebAuthnRegistrationResponseWrapper</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnregistrationresponsewrapper">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRegistrationResponseWrapper</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -368,7 +375,7 @@
     <td></td>
   </tr><tr>
     <td><code>data</code></td>
-    <td><a href="#schema-dto.webauthnregistrationresponse"><code>dto.WebAuthnRegistrationResponse</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnregistrationresponse"><code>gitee_com_autional_service-identity_internal_handler_dto.WebAuthnRegistrationResponse</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -389,7 +396,7 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.webauthnuserentity">dto.WebAuthnUserEntity</h3>
+<h3 id="schema-gitee_com_autional_service-identity_internal_handler_dto.webauthnuserentity">gitee_com_autional_service-identity_internal_handler_dto.WebAuthnUserEntity</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>

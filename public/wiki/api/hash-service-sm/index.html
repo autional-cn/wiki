@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,45 +138,45 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="active">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="active">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><span>Hash Service (SM3)</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><span>Hash Service (SM3)</span></nav>
       <h1>Hash Service (SM3)</h1>
-<p class="summary">Port 11027 &middot; 3 endpoints &middot; <code>micro-services/hash-service-sm/</code></p>
+<p class="summary">Port 11027 &middot; 3 endpoints &middot; <code>docker/specs/hash-service-sm/</code></p>
 <h2 id="tag-hash">Hash</h2>
 <table>
   <thead><tr><th>Method</th><th>Path</th><th>Summary</th><th></th></tr></thead>
-  <tbody><tr><td><span class="meta-item method POST">POST</span></td><td><code>/grpc/hash.HashService/Hash</code></td><td>Hash Password (PBKDF2-SM3)</td><td><a href="/"hash-service-sm/POST-grpc-hash.HashService-Hash/">detail →</a></td></tr><tr><td><span class="meta-item method POST">POST</span></td><td><code>/grpc/hash.HashService/Verify</code></td><td>Verify Password</td><td><a href="/"hash-service-sm/POST-grpc-hash.HashService-Verify/">detail →</a></td></tr></tbody>
+  <tbody><tr><td><span class="meta-item method POST">POST</span></td><td><code>/grpc/hash.HashService/Hash</code></td><td>Hash Password (PBKDF2-SM3)</td><td><a href="/hash-service-sm/POST-grpc-hash.HashService-Hash/">detail →</a></td></tr><tr><td><span class="meta-item method POST">POST</span></td><td><code>/grpc/hash.HashService/Verify</code></td><td>Verify Password</td><td><a href="/hash-service-sm/POST-grpc-hash.HashService-Verify/">detail →</a></td></tr></tbody>
 </table>
 <h2 id="tag-health">Health</h2>
 <table>
   <thead><tr><th>Method</th><th>Path</th><th>Summary</th><th></th></tr></thead>
-  <tbody><tr><td><span class="meta-item method GET">GET</span></td><td><code>/grpc/hash.HashService/Health</code></td><td>Health Check</td><td><a href="/"hash-service-sm/GET-grpc-hash.HashService-Health/">detail →</a></td></tr></tbody>
+  <tbody><tr><td><span class="meta-item method GET">GET</span></td><td><code>/grpc/hash.HashService/Health</code></td><td>Health Check</td><td><a href="/hash-service-sm/GET-grpc-hash.HashService-Health/">detail →</a></td></tr></tbody>
 </table>
       <footer>
         Generated from OpenAPI specs. <a href="https://reference.autional.cn/">Interactive API explorer (Scalar)</a>

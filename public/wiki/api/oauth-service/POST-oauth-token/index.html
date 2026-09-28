@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POST /oauth/token — OAuth Service API | Autional</title>
-  <meta name="description" content="OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 private_key_jwt 客户端认证和 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Code Grant)、§4.3 (Resource Owner Password)、§4.4 (Client Credentials)、RFC 6749 §5.1-5">
+  <meta name="description" content="OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 client_secret_basic（Authorization: Basic 头，RFC 6749 §2.3.1）、client_secret_post 与 private_key_jwt 客户端认证及 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Cod">
   <meta name="robots" content="index, follow">
   <meta name="language" content="zh-CN">
   <meta name="docsearch:language" content="zh-CN">
@@ -13,15 +13,15 @@
   <link rel="alternate" hreflang="x-default" href="https://wiki.autional.cn/oauth-service/POST-oauth-token/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFkNGVkOCIvPjx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC1zaXplPSIxOCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSIgZm9udC13ZWlnaHQ9IjcwMCI+QTwvdGV4dD48L3N2Zz4=">
   <meta property="og:title" content="POST /oauth/token — OAuth Service API | Autional">
-  <meta property="og:description" content="OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 private_key_jwt 客户端认证和 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Code Grant)、§4.3 (Resource Owner Password)、§4.4 (Client Credentials)、RFC 6749 §5.1-5">
+  <meta property="og:description" content="OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 client_secret_basic（Authorization: Basic 头，RFC 6749 §2.3.1）、client_secret_post 与 private_key_jwt 客户端认证及 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Cod">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wiki.autional.cn/oauth-service/POST-oauth-token/">
   <meta property="og:site_name" content="Autional API Wiki">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="POST /oauth/token — OAuth Service API | Autional">
-  <meta name="twitter:description" content="OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 private_key_jwt 客户端认证和 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Code Grant)、§4.3 (Resource Owner Password)、§4.4 (Client Credentials)、RFC 6749 §5.1-5">
+  <meta name="twitter:description" content="OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 client_secret_basic（Authorization: Basic 头，RFC 6749 §2.3.1）、client_secret_post 与 private_key_jwt 客户端认证及 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Cod">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Docs", "item": "https://wiki.autional.cn/"}, {"@type": "ListItem", "position": 2, "name": "API Reference", "item": "https://wiki.autional.cn/"}, {"@type": "ListItem", "position": 3, "name": "OAuth Service", "item": "https://wiki.autional.cn/oauth-service/"}, {"@type": "ListItem", "position": 4, "name": "POST /oauth/token"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "POST /oauth/token — OAuth Service API | Autional", "description": "OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 private_key_jwt 客户端认证和 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Code Grant)、§4.3 (Resource Owner Password)、§4.4 (Client Credentials)、RFC 6749 §5.1-5", "about": {"@type": "SoftwareApplication", "name": "Autional"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "POST /oauth/token — OAuth Service API | Autional", "description": "OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 client_secret_basic（Authorization: Basic 头，RFC 6749 §2.3.1）、client_secret_post 与 private_key_jwt 客户端认证及 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Cod", "about": {"@type": "SoftwareApplication", "name": "Autional"}}</script>
   <style>  html{visibility:visible;opacity:1}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{
@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,36 +138,36 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="active">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="active">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"oauth-service/">OAuth Service</a><span>›</span><span>POST /oauth/token</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/oauth-service/">OAuth Service</a><span>›</span><span>POST /oauth/token</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/oauth/token</code></h1>
-<p class="summary">OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 private_key_jwt 客户端认证和 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Code Grant)、§4.3 (Resource Owner Password)、§4.4 (Client Credentials)、RFC 6749 §5.1-5.2、RFC 7636 (PKCE)、RFC 8628 §3.4 (Device Code)。</p>
+<p class="summary">OAuth 2.0 令牌端点。支持 authorization_code、refresh_token、client_credentials、urn:ietf:params:oauth:grant-type:device_code 四种授权类型。支持 client_secret_basic（Authorization: Basic 头，RFC 6749 §2.3.1）、client_secret_post 与 private_key_jwt 客户端认证及 DPoP。返回扁平 JSON（无 code/message 信封）。参考：RFC 6749 §4.1.3 (Authorization Code Grant)、§4.3 (Resource Owner Password)、§4.4 (Client Credentials)、RFC 6749 §5.1-5.2、RFC 7636 (PKCE)、RFC 8628 §3.4 (Device Code)。</p>
 <div class="meta"><span class="meta-item">OAuth</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/x-www-form-urlencoded</span></div>
 <section><h2>Request Parameters</h2>
 <table>
@@ -268,11 +268,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>令牌响应（含 access_token, refresh_token, id_token 等）</td><td><a href="#schema-dto.oauthtokenresponse"><code>dto.OAuthTokenResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>unsupported_grant_type：不支持的授权类型。参考：RFC 6749 §5.2。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>invalid_client：客户端认证失败。参考：RFC 6749 §5.2。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>429</strong></td><td>rate_limit_exceeded：请求频率过高，请稍后重试</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：授权服务器内部错误。参考：RFC 6749 §5.2。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>令牌响应（含 access_token, refresh_token, id_token 等）</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oauthtokenresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthTokenResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>unsupported_grant_type：不支持的授权类型。参考：RFC 6749 §5.2。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>invalid_client：客户端认证失败。参考：RFC 6749 §5.2。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>429</strong></td><td>rate_limit_exceeded：请求频率过高，请稍后重试</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：授权服务器内部错误。参考：RFC 6749 §5.2。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.authorizationdetaildto">dto.AuthorizationDetailDTO</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.authorizationdetaildto">gitee_com_autional_service-oauth_internal_handler_dto.AuthorizationDetailDTO</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -319,7 +319,7 @@
     <td>授权类型</td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.oautherrorresponse">dto.OAuthErrorResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse">gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</h3>
 <p>OAuth标准错误响应</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -353,7 +353,7 @@
     <td>状态</td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.oauthtokenresponse">dto.OAuthTokenResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oauthtokenresponse">gitee_com_autional_service-oauth_internal_handler_dto.OAuthTokenResponse</h3>
 <p>OAuth令牌响应</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -366,7 +366,7 @@
     <td>访问令牌</td>
   </tr><tr>
     <td><code>authorization_details</code></td>
-    <td>array of<br/><p>See <a href="#schema-dto.authorizationdetaildto"><code>dto.AuthorizationDetailDTO</code></a></p></td>
+    <td>array of<br/><p>See <a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.authorizationdetaildto"><code>gitee_com_autional_service-oauth_internal_handler_dto.AuthorizationDetailDTO</code></a></p></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>

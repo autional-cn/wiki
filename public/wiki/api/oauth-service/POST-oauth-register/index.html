@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,40 +138,40 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="active">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="active">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"oauth-service/">OAuth Service</a><span>›</span><span>POST /oauth/register</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/oauth-service/">OAuth Service</a><span>›</span><span>POST /oauth/register</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/oauth/register</code></h1>
 <p class="summary">OAuth 2.0 动态客户端注册端点。客户端自助注册并获取 client_id、client_secret 和 registration_access_token。限流：同一IP每小时最多10次注册。参考：RFC 7591 §2 (Dynamic Client Registration Protocol)。</p>
 <div class="meta"><span class="meta-item">OAuth</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
 <section><h2>Request Body</h2>
-<p><strong>Schema:</strong> <a href="#schema-dto.clientregistrationrequest"><code>dto.ClientRegistrationRequest</code></a></p>
-<div id="schema-dto.clientregistrationrequest">
+<p><strong>Schema:</strong> <a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.clientregistrationrequest"><code>gitee_com_autional_service-oauth_internal_handler_dto.ClientRegistrationRequest</code></a></p>
+<div id="schema-gitee_com_autional_service-oauth_internal_handler_dto.clientregistrationrequest">
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -286,11 +286,11 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>201</strong></td><td>注册成功（含 client_id, client_secret, registration_access_token）。参考：RFC 7591 §2.1。</td><td><a href="#schema-dto.clientregistrationdetailresponse"><code>dto.ClientRegistrationDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>invalid_client_metadata：请求元数据无效（缺少 redirect_uris 等）。参考：RFC 7591 §2.3。</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>429</strong></td><td>rate_limit_exceeded：注册频率超限，请稍后重试</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：注册客户端失败</td><td><a href="#schema-dto.oautherrorresponse"><code>dto.OAuthErrorResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>201</strong></td><td>注册成功（含 client_id, client_secret, registration_access_token）。参考：RFC 7591 §2.1。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.clientregistrationdetailresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.ClientRegistrationDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>invalid_client_metadata：请求元数据无效（缺少 redirect_uris 等）。参考：RFC 7591 §2.3。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>429</strong></td><td>rate_limit_exceeded：注册频率超限，请稍后重试</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：注册客户端失败</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.clientregistrationdetailresponse">dto.ClientRegistrationDetailResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.clientregistrationdetailresponse">gitee_com_autional_service-oauth_internal_handler_dto.ClientRegistrationDetailResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
@@ -302,7 +302,7 @@
     <td></td>
   </tr><tr>
     <td><code>data</code></td>
-    <td><a href="#schema-dto.clientregistrationresponse"><code>dto.ClientRegistrationResponse</code></a></td>
+    <td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.clientregistrationresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.ClientRegistrationResponse</code></a></td>
     <td><span class="optional">No</span></td>
     <td></td>
     <td style="font-size:11px"></td>
@@ -323,7 +323,7 @@
     <td></td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.clientregistrationresponse">dto.ClientRegistrationResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.clientregistrationresponse">gitee_com_autional_service-oauth_internal_handler_dto.ClientRegistrationResponse</h3>
 <p>OAuth 2.0 Dynamic Client Registration response (RFC 7591 §2.1)</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -448,7 +448,7 @@
     <td>服务条款URL</td>
   </tr></tbody>
 </table>
-<h3 id="schema-dto.oautherrorresponse">dto.OAuthErrorResponse</h3>
+<h3 id="schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse">gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</h3>
 <p>OAuth标准错误响应</p>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>

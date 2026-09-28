@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,34 +138,34 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="active">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="active">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"audit-service/">Audit Service</a><span>›</span><span>GET /admin/audit/anomalies/{anomaly_id}/timeline</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/audit-service/">Audit Service</a><span>›</span><span>GET /admin/audit/anomalies/{anomaly_id}/timeline</span></nav>
       <h1><span class="meta-item method GET">GET</span> <code class="path">/admin/audit/anomalies/{anomaly_id}/timeline</code></h1>
 <p class="summary">获取异常关联的用户/会话/设备事件时间线（±24h 窗口内按时间排列的审计日志）。参考：ISO 27001:2022 Annex A.12.4 (Event Logging)、PCI DSS v4.0 Req 10 (Log &amp; Monitor)。</p>
 <div class="meta"><span class="meta-item">审计服务</span> <span class="meta-item auth authenticated">`bearerAuth`</span> <span class="meta-item">application/json</span></div>
@@ -187,464 +187,10 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>异常时间线</td><td><a href="#schema-dto.anomalytimelinedetailresponse"><code>dto.AnomalyTimelineDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数校验失败</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>异常不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>异常时间线</td><td><a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.anomalytimelinedetailresponse"><code>gitee_com_autional_service-audit_internal_handler_dto.AnomalyTimelineDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求参数校验失败</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>401</strong></td><td>未认证</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>404</strong></td><td>异常不存在</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr><tr><td><strong>500</strong></td><td>服务内部错误</td><td><a href="#schema-dto.problem"><code>dto.Problem</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.anomalycommentresponse">dto.AnomalyCommentResponse</h3>
-<p>异常调查评论</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>author_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>usr_analyst001</code></td>
-    <td style="font-size:11px"></td>
-    <td>评论者ID</td>
-  </tr><tr>
-    <td><code>author_name</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>Zhang San</code></td>
-    <td style="font-size:11px"></td>
-    <td>评论者名</td>
-  </tr><tr>
-    <td><code>content</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>经调查确认为误报</code></td>
-    <td style="font-size:11px"></td>
-    <td>内容</td>
-  </tr><tr>
-    <td><code>created_at</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1713175800</code></td>
-    <td style="font-size:11px"></td>
-    <td>时间戳</td>
-  </tr><tr>
-    <td><code>id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>cmt_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>评论ID</td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.anomalyresponse">dto.AnomalyResponse</h3>
-<p>审计异常记录</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>assignee</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>usr_analyst001</code></td>
-    <td style="font-size:11px"></td>
-    <td>分析师</td>
-  </tr><tr>
-    <td><code>comments</code></td>
-    <td>array of<br/><p>See <a href="#schema-dto.anomalycommentresponse"><code>dto.AnomalyCommentResponse</code></a></p></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>评论</td>
-  </tr><tr>
-    <td><code>created_at</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1713175800</code></td>
-    <td style="font-size:11px"></td>
-    <td>创建时间戳</td>
-  </tr><tr>
-    <td><code>description</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>检测到连续5次登录失败</code></td>
-    <td style="font-size:11px"></td>
-    <td>描述</td>
-  </tr><tr>
-    <td><code>detected_at</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1713175800</code></td>
-    <td style="font-size:11px"></td>
-    <td>检测时间戳</td>
-  </tr><tr>
-    <td><code>event_ids</code></td>
-    <td>array of<br/><p><strong>string</strong></p></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>关联事件ID</td>
-  </tr><tr>
-    <td><code>id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>ano_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>异常ID</td>
-  </tr><tr>
-    <td><code>mitre_tactic</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>T1110</code></td>
-    <td style="font-size:11px"></td>
-    <td>MITRE战术</td>
-  </tr><tr>
-    <td><code>related_case_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>关联案件ID</td>
-  </tr><tr>
-    <td><code>resolved_at</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>解决时间戳</td>
-  </tr><tr>
-    <td><code>resolved_by</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>解决者</td>
-  </tr><tr>
-    <td><code>severity</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>high</code></td>
-    <td style="font-size:11px"></td>
-    <td>严重程度</td>
-  </tr><tr>
-    <td><code>status</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>open</code></td>
-    <td style="font-size:11px"></td>
-    <td>状态</td>
-  </tr><tr>
-    <td><code>tenant_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>tnt_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>租户ID</td>
-  </tr><tr>
-    <td><code>type</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>brute_force</code></td>
-    <td style="font-size:11px"></td>
-    <td>类型</td>
-  </tr><tr>
-    <td><code>updated_at</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>更新时间戳</td>
-  </tr><tr>
-    <td><code>user_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>usr_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>用户ID</td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.anomalytimelinedetailresponse">dto.AnomalyTimelineDetailResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>data</code></td>
-    <td><a href="#schema-dto.anomalytimelineresponse"><code>dto.AnomalyTimelineResponse</code></a></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.anomalytimelineresponse">dto.AnomalyTimelineResponse</h3>
-<p>异常关联的用户事件时间线，包含设备/会话上下文</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>anomaly</code></td>
-    <td><a href="#schema-dto.anomalyresponse"><code>dto.AnomalyResponse</code></a></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>context</code></td>
-    <td><a href="#schema-dto.contextsummary"><code>dto.ContextSummary</code></a></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>events</code></td>
-    <td>array of<br/><p>See <a href="#schema-dto.auditlogresponse"><code>dto.AuditLogResponse</code></a></p></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>login_sessions</code></td>
-    <td>array of<br/><p>See <a href="#schema-dto.devicesummary"><code>dto.DeviceSummary</code></a></p></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.auditlogresponse">dto.AuditLogResponse</h3>
-<p>审计日志记录信息</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>action</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>user.login</code></td>
-    <td style="font-size:11px"></td>
-    <td>操作</td>
-  </tr><tr>
-    <td><code>app_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>app_xyz</code></td>
-    <td style="font-size:11px"></td>
-    <td>应用ID</td>
-  </tr><tr>
-    <td><code>duration</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>150</code></td>
-    <td style="font-size:11px"></td>
-    <td>耗时(ms)</td>
-  </tr><tr>
-    <td><code>id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>audit_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>日志ID</td>
-  </tr><tr>
-    <td><code>ip</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>192.168.1.1</code></td>
-    <td style="font-size:11px"></td>
-    <td>IP</td>
-  </tr><tr>
-    <td><code>level</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>info</code></td>
-    <td style="font-size:11px"></td>
-    <td>级别</td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>用户登录成功</code></td>
-    <td style="font-size:11px"></td>
-    <td>消息</td>
-  </tr><tr>
-    <td><code>metadata</code></td>
-    <td><code>object</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>元数据</td>
-  </tr><tr>
-    <td><code>module</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>identity</code></td>
-    <td style="font-size:11px"></td>
-    <td>模块</td>
-  </tr><tr>
-    <td><code>operator_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>usr_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>操作者ID</td>
-  </tr><tr>
-    <td><code>operator_type</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>user</code></td>
-    <td style="font-size:11px"></td>
-    <td>操作者类型</td>
-  </tr><tr>
-    <td><code>request_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>req_xyz789</code></td>
-    <td style="font-size:11px"></td>
-    <td>请求ID</td>
-  </tr><tr>
-    <td><code>sequence</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>12345</code></td>
-    <td style="font-size:11px"></td>
-    <td>序列号</td>
-  </tr><tr>
-    <td><code>status</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>0</code></td>
-    <td style="font-size:11px"></td>
-    <td>状态</td>
-  </tr><tr>
-    <td><code>target_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>usr_target</code></td>
-    <td style="font-size:11px"></td>
-    <td>目标ID</td>
-  </tr><tr>
-    <td><code>target_type</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>user</code></td>
-    <td style="font-size:11px"></td>
-    <td>目标类型</td>
-  </tr><tr>
-    <td><code>tenant_id</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>tnt_abc123</code></td>
-    <td style="font-size:11px"></td>
-    <td>租户ID</td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1713175800</code></td>
-    <td style="font-size:11px"></td>
-    <td>时间戳</td>
-  </tr><tr>
-    <td><code>user_agent</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>Mozilla/5.0...</code></td>
-    <td style="font-size:11px"></td>
-    <td>UA</td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.contextsummary">dto.ContextSummary</h3>
-<p>异常关联事件的高层统计信息</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>time_span_seconds</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>86400</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>total_events</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>27</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>unique_devices</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>3</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>unique_ips</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>2</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.devicesummary">dto.DeviceSummary</h3>
-<p>异常时间线中某个设备指纹的摘要信息</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>event_count</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>5</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>fingerprint</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>f7a3c8e1b2d4...</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>first_seen</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1713175800</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>ip</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>192.168.1.1</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>last_seen</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>1713180000</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>user_agent</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>Mozilla/5.0...</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
 <h3 id="schema-dto.fieldviolation">dto.FieldViolation</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
@@ -824,6 +370,460 @@ ISO 8601 格式
     <td>Type 是标识问题类型的URI引用
 当该URI被解引用时，应提供人类可读的文档
 示例：&quot;https://api.example.com/errors/invalid-request&quot;</td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.anomalycommentresponse">gitee_com_autional_service-audit_internal_handler_dto.AnomalyCommentResponse</h3>
+<p>异常调查评论</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>author_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>usr_analyst001</code></td>
+    <td style="font-size:11px"></td>
+    <td>评论者ID</td>
+  </tr><tr>
+    <td><code>author_name</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>Zhang San</code></td>
+    <td style="font-size:11px"></td>
+    <td>评论者名</td>
+  </tr><tr>
+    <td><code>content</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>经调查确认为误报</code></td>
+    <td style="font-size:11px"></td>
+    <td>内容</td>
+  </tr><tr>
+    <td><code>created_at</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1713175800</code></td>
+    <td style="font-size:11px"></td>
+    <td>时间戳</td>
+  </tr><tr>
+    <td><code>id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>cmt_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>评论ID</td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.anomalyresponse">gitee_com_autional_service-audit_internal_handler_dto.AnomalyResponse</h3>
+<p>审计异常记录</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>assignee</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>usr_analyst001</code></td>
+    <td style="font-size:11px"></td>
+    <td>分析师</td>
+  </tr><tr>
+    <td><code>comments</code></td>
+    <td>array of<br/><p>See <a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.anomalycommentresponse"><code>gitee_com_autional_service-audit_internal_handler_dto.AnomalyCommentResponse</code></a></p></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>评论</td>
+  </tr><tr>
+    <td><code>created_at</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1713175800</code></td>
+    <td style="font-size:11px"></td>
+    <td>创建时间戳</td>
+  </tr><tr>
+    <td><code>description</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>检测到连续5次登录失败</code></td>
+    <td style="font-size:11px"></td>
+    <td>描述</td>
+  </tr><tr>
+    <td><code>detected_at</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1713175800</code></td>
+    <td style="font-size:11px"></td>
+    <td>检测时间戳</td>
+  </tr><tr>
+    <td><code>event_ids</code></td>
+    <td>array of<br/><p><strong>string</strong></p></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>关联事件ID</td>
+  </tr><tr>
+    <td><code>id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>ano_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>异常ID</td>
+  </tr><tr>
+    <td><code>mitre_tactic</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>T1110</code></td>
+    <td style="font-size:11px"></td>
+    <td>MITRE战术</td>
+  </tr><tr>
+    <td><code>related_case_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>关联案件ID</td>
+  </tr><tr>
+    <td><code>resolved_at</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>解决时间戳</td>
+  </tr><tr>
+    <td><code>resolved_by</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>解决者</td>
+  </tr><tr>
+    <td><code>severity</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>high</code></td>
+    <td style="font-size:11px"></td>
+    <td>严重程度</td>
+  </tr><tr>
+    <td><code>status</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>open</code></td>
+    <td style="font-size:11px"></td>
+    <td>状态</td>
+  </tr><tr>
+    <td><code>tenant_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>tnt_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>租户ID</td>
+  </tr><tr>
+    <td><code>type</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>brute_force</code></td>
+    <td style="font-size:11px"></td>
+    <td>类型</td>
+  </tr><tr>
+    <td><code>updated_at</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>更新时间戳</td>
+  </tr><tr>
+    <td><code>user_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>usr_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>用户ID</td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.anomalytimelinedetailresponse">gitee_com_autional_service-audit_internal_handler_dto.AnomalyTimelineDetailResponse</h3>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>code</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>data</code></td>
+    <td><a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.anomalytimelineresponse"><code>gitee_com_autional_service-audit_internal_handler_dto.AnomalyTimelineResponse</code></a></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>message</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.anomalytimelineresponse">gitee_com_autional_service-audit_internal_handler_dto.AnomalyTimelineResponse</h3>
+<p>异常关联的用户事件时间线，包含设备/会话上下文</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>anomaly</code></td>
+    <td><a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.anomalyresponse"><code>gitee_com_autional_service-audit_internal_handler_dto.AnomalyResponse</code></a></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>context</code></td>
+    <td><a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.contextsummary"><code>gitee_com_autional_service-audit_internal_handler_dto.ContextSummary</code></a></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>events</code></td>
+    <td>array of<br/><p>See <a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.auditlogresponse"><code>gitee_com_autional_service-audit_internal_handler_dto.AuditLogResponse</code></a></p></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>login_sessions</code></td>
+    <td>array of<br/><p>See <a href="#schema-gitee_com_autional_service-audit_internal_handler_dto.devicesummary"><code>gitee_com_autional_service-audit_internal_handler_dto.DeviceSummary</code></a></p></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.auditlogresponse">gitee_com_autional_service-audit_internal_handler_dto.AuditLogResponse</h3>
+<p>审计日志记录信息</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>action</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>user.login</code></td>
+    <td style="font-size:11px"></td>
+    <td>操作</td>
+  </tr><tr>
+    <td><code>app_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>app_xyz</code></td>
+    <td style="font-size:11px"></td>
+    <td>应用ID</td>
+  </tr><tr>
+    <td><code>duration</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>150</code></td>
+    <td style="font-size:11px"></td>
+    <td>耗时(ms)</td>
+  </tr><tr>
+    <td><code>id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>audit_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>日志ID</td>
+  </tr><tr>
+    <td><code>ip</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>192.168.1.1</code></td>
+    <td style="font-size:11px"></td>
+    <td>IP</td>
+  </tr><tr>
+    <td><code>level</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>info</code></td>
+    <td style="font-size:11px"></td>
+    <td>级别</td>
+  </tr><tr>
+    <td><code>message</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>用户登录成功</code></td>
+    <td style="font-size:11px"></td>
+    <td>消息</td>
+  </tr><tr>
+    <td><code>metadata</code></td>
+    <td><code>object</code></td>
+    <td><span class="optional">No</span></td>
+    <td></td>
+    <td style="font-size:11px"></td>
+    <td>元数据</td>
+  </tr><tr>
+    <td><code>module</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>identity</code></td>
+    <td style="font-size:11px"></td>
+    <td>模块</td>
+  </tr><tr>
+    <td><code>operator_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>usr_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>操作者ID</td>
+  </tr><tr>
+    <td><code>operator_type</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>user</code></td>
+    <td style="font-size:11px"></td>
+    <td>操作者类型</td>
+  </tr><tr>
+    <td><code>request_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>req_xyz789</code></td>
+    <td style="font-size:11px"></td>
+    <td>请求ID</td>
+  </tr><tr>
+    <td><code>sequence</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>12345</code></td>
+    <td style="font-size:11px"></td>
+    <td>序列号</td>
+  </tr><tr>
+    <td><code>status</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>0</code></td>
+    <td style="font-size:11px"></td>
+    <td>状态</td>
+  </tr><tr>
+    <td><code>target_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>usr_target</code></td>
+    <td style="font-size:11px"></td>
+    <td>目标ID</td>
+  </tr><tr>
+    <td><code>target_type</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>user</code></td>
+    <td style="font-size:11px"></td>
+    <td>目标类型</td>
+  </tr><tr>
+    <td><code>tenant_id</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>tnt_abc123</code></td>
+    <td style="font-size:11px"></td>
+    <td>租户ID</td>
+  </tr><tr>
+    <td><code>timestamp</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1713175800</code></td>
+    <td style="font-size:11px"></td>
+    <td>时间戳</td>
+  </tr><tr>
+    <td><code>user_agent</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>Mozilla/5.0...</code></td>
+    <td style="font-size:11px"></td>
+    <td>UA</td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.contextsummary">gitee_com_autional_service-audit_internal_handler_dto.ContextSummary</h3>
+<p>异常关联事件的高层统计信息</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>time_span_seconds</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>86400</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>total_events</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>27</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>unique_devices</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>3</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>unique_ips</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>2</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr></tbody>
+</table>
+<h3 id="schema-gitee_com_autional_service-audit_internal_handler_dto.devicesummary">gitee_com_autional_service-audit_internal_handler_dto.DeviceSummary</h3>
+<p>异常时间线中某个设备指纹的摘要信息</p>
+<table class="schema-table">
+  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
+  <tbody><tr>
+    <td><code>event_count</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>5</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>fingerprint</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>f7a3c8e1b2d4...</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>first_seen</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1713175800</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>ip</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>192.168.1.1</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>last_seen</code></td>
+    <td><code>integer</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>1713180000</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
+  </tr><tr>
+    <td><code>user_agent</code></td>
+    <td><code>string</code></td>
+    <td><span class="optional">No</span></td>
+    <td><code>Mozilla/5.0...</code></td>
+    <td style="font-size:11px"></td>
+    <td></td>
   </tr></tbody>
 </table>
 </section>

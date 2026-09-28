@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POST /communication/callback/{provider} — Communication Service API | Autional</title>
-  <meta name="description" content="接收并处理各短信、邮件、推送服务商（阿里云、腾讯云、AWS SNS/SES、SendGrid、Mailgun、FCM、APNs、JPush等）的投递状态回调通知，自动更新对应消息的发送状态。回调为公开端点，由各服务商直接调用。参考：ePrivacy Directive 2002/58/EC、CAN-SPAM Act。">
+  <meta name="description" content="POST /communication/callback/{provider}">
   <meta name="robots" content="index, follow">
   <meta name="language" content="zh-CN">
   <meta name="docsearch:language" content="zh-CN">
@@ -13,15 +13,15 @@
   <link rel="alternate" hreflang="x-default" href="https://wiki.autional.cn/communication-service/POST-communication-callback-provider/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFkNGVkOCIvPjx0ZXh0IHg9IjE2IiB5PSIyMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC1zaXplPSIxOCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSIgZm9udC13ZWlnaHQ9IjcwMCI+QTwvdGV4dD48L3N2Zz4=">
   <meta property="og:title" content="POST /communication/callback/{provider} — Communication Service API | Autional">
-  <meta property="og:description" content="接收并处理各短信、邮件、推送服务商（阿里云、腾讯云、AWS SNS/SES、SendGrid、Mailgun、FCM、APNs、JPush等）的投递状态回调通知，自动更新对应消息的发送状态。回调为公开端点，由各服务商直接调用。参考：ePrivacy Directive 2002/58/EC、CAN-SPAM Act。">
+  <meta property="og:description" content="POST /communication/callback/{provider}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wiki.autional.cn/communication-service/POST-communication-callback-provider/">
   <meta property="og:site_name" content="Autional API Wiki">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="POST /communication/callback/{provider} — Communication Service API | Autional">
-  <meta name="twitter:description" content="接收并处理各短信、邮件、推送服务商（阿里云、腾讯云、AWS SNS/SES、SendGrid、Mailgun、FCM、APNs、JPush等）的投递状态回调通知，自动更新对应消息的发送状态。回调为公开端点，由各服务商直接调用。参考：ePrivacy Directive 2002/58/EC、CAN-SPAM Act。">
+  <meta name="twitter:description" content="POST /communication/callback/{provider}">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Docs", "item": "https://wiki.autional.cn/"}, {"@type": "ListItem", "position": 2, "name": "API Reference", "item": "https://wiki.autional.cn/"}, {"@type": "ListItem", "position": 3, "name": "Communication Service", "item": "https://wiki.autional.cn/communication-service/"}, {"@type": "ListItem", "position": 4, "name": "POST /communication/callback/{provider}"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "POST /communication/callback/{provider} — Communication Service API | Autional", "description": "接收并处理各短信、邮件、推送服务商（阿里云、腾讯云、AWS SNS/SES、SendGrid、Mailgun、FCM、APNs、JPush等）的投递状态回调通知，自动更新对应消息的发送状态。回调为公开端点，由各服务商直接调用。参考：ePrivacy Directive 2002/58/EC、CAN-SPAM Act。", "about": {"@type": "SoftwareApplication", "name": "Autional"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "POST /communication/callback/{provider} — Communication Service API | Autional", "description": "POST /communication/callback/{provider}", "about": {"@type": "SoftwareApplication", "name": "Autional"}}</script>
   <style>  html{visibility:visible;opacity:1}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{
@@ -130,7 +130,7 @@
       <svg width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#1d4ed8"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="system-ui">A</text></svg>
       Autional API Wiki
     </a>
-    <a href="/"">API Reference</a>
+    <a href="/">API Reference</a>
     <span style="flex:1"></span>
     <a href="https://www.autional.cn" target="_blank" rel="noreferrer" style="font-weight:400;font-size:13px;color:var(--c-text2)">www.autional.cn →</a>
   </header>
@@ -138,142 +138,36 @@
     <aside class="sidebar" id="sidebar">
       <nav>
         <h3>Services</h3>
-                <a href="/"identity-service/" class="">Identity Service<span class="count"></span></a>
-        <a href="/"profile-service/" class="">Profile Service<span class="count"></span></a>
-        <a href="/"tenant-service/" class="">Tenant Service<span class="count"></span></a>
-        <a href="/"session-service/" class="">Session Service<span class="count"></span></a>
-        <a href="/"mfa-service/" class="">MFA Service<span class="count"></span></a>
-        <a href="/"oauth-service/" class="">OAuth Service<span class="count"></span></a>
-        <a href="/"point-service/" class="">Point Service<span class="count"></span></a>
-        <a href="/"wallet-service/" class="">Wallet Service<span class="count"></span></a>
-        <a href="/"audit-service/" class="">Audit Service<span class="count"></span></a>
-        <a href="/"notification-service/" class="">Notification Service<span class="count"></span></a>
-        <a href="/"communication-service/" class="active">Communication Service<span class="count"></span></a>
-        <a href="/"storage-service/" class="">Storage Service<span class="count"></span></a>
-        <a href="/"billing-service/" class="">Billing Service<span class="count"></span></a>
-        <a href="/"compliance-service/" class="">Compliance Service<span class="count"></span></a>
-        <a href="/"status-service/" class="">Status Service<span class="count"></span></a>
-        <a href="/"secret-service/" class="">Secret Service<span class="count"></span></a>
-        <a href="/"pay-service/" class="">Pay Service<span class="count"></span></a>
-        <a href="/"rbac-service/" class="">RBAC Service<span class="count"></span></a>
-        <a href="/"thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
-        <a href="/"verification-service/" class="">Verification Service<span class="count"></span></a>
-        <a href="/"gateway-service/" class="">Gateway Service<span class="count"></span></a>
-        <a href="/"saml-service/" class="">SAML Service<span class="count"></span></a>
-        <a href="/"hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
-        <a href="/"hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+                <a href="/identity-service/" class="">Identity Service<span class="count"></span></a>
+        <a href="/profile-service/" class="">Profile Service<span class="count"></span></a>
+        <a href="/tenant-service/" class="">Tenant Service<span class="count"></span></a>
+        <a href="/session-service/" class="">Session Service<span class="count"></span></a>
+        <a href="/mfa-service/" class="">MFA Service<span class="count"></span></a>
+        <a href="/oauth-service/" class="">OAuth Service<span class="count"></span></a>
+        <a href="/point-service/" class="">Point Service<span class="count"></span></a>
+        <a href="/wallet-service/" class="">Wallet Service<span class="count"></span></a>
+        <a href="/audit-service/" class="">Audit Service<span class="count"></span></a>
+        <a href="/notification-service/" class="">Notification Service<span class="count"></span></a>
+        <a href="/communication-service/" class="active">Communication Service<span class="count"></span></a>
+        <a href="/storage-service/" class="">Storage Service<span class="count"></span></a>
+        <a href="/billing-service/" class="">Billing Service<span class="count"></span></a>
+        <a href="/compliance-service/" class="">Compliance Service<span class="count"></span></a>
+        <a href="/status-service/" class="">Status Service<span class="count"></span></a>
+        <a href="/secret-service/" class="">Secret Service<span class="count"></span></a>
+        <a href="/pay-service/" class="">Pay Service<span class="count"></span></a>
+        <a href="/rbac-service/" class="">RBAC Service<span class="count"></span></a>
+        <a href="/thirdparty-service/" class="">Thirdparty Service<span class="count"></span></a>
+        <a href="/verification-service/" class="">Verification Service<span class="count"></span></a>
+        <a href="/gateway-service/" class="">Gateway Service<span class="count"></span></a>
+        <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
+        <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
+        <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
       </nav>
     </aside>
     <main>
-      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/"">API Reference</a><span>›</span><a href="/"communication-service/">Communication Service</a><span>›</span><span>POST /communication/callback/{provider}</span></nav>
+      <nav class="breadcrumb"><a href="/">Docs</a><span>›</span><a href="/">API Reference</a><span>›</span><a href="/communication-service/">Communication Service</a><span>›</span><span>POST /communication/callback/{provider}</span></nav>
       <h1><span class="meta-item method POST">POST</span> <code class="path">/communication/callback/{provider}</code></h1>
-<p class="summary">接收并处理各短信、邮件、推送服务商（阿里云、腾讯云、AWS SNS/SES、SendGrid、Mailgun、FCM、APNs、JPush等）的投递状态回调通知，自动更新对应消息的发送状态。回调为公开端点，由各服务商直接调用。参考：ePrivacy Directive 2002/58/EC、CAN-SPAM Act。</p>
-<div class="meta"><span class="meta-item">通信服务</span> <span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
-<section><h2>Request Parameters</h2>
-<table>
-  <thead><tr><th>Name</th><th>In</th><th>Type</th><th>Required</th><th>Default</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>provider</code></td>
-    <td><code>path</code></td>
-    <td><code>string</code></td>
-    <td><span class="required">Yes</span></td>
-    <td></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td>服务商名称：aliyun/tencentcloud/aws/sendgrid/ses/mailgun/fcm/apns/jpush</td>
-  </tr></tbody>
-</table>
-</section>
-<section><h2>Request Body</h2>
-<p><em>Accepts an empty JSON object <code>{}</code></em></p>
-</section>
-<section><h2>Responses</h2>
-<table>
-  <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>回调已接收确认</td><td><a href="#schema-dto.callbackresultdetailresponse"><code>dto.CallbackResultDetailResponse</code></a></td></tr><tr><td><strong>400</strong></td><td>请求数据格式错误</td><td><a href="#schema-dto.simpleresponse"><code>dto.SimpleResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>回调处理内部错误</td><td><a href="#schema-dto.simpleresponse"><code>dto.SimpleResponse</code></a></td></tr></tbody>
-</table>
-</section>
-<section><h2>Referenced Schemas</h2>
-<h3 id="schema-dto.callbackresultdetailresponse">dto.CallbackResultDetailResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>data</code></td>
-    <td><a href="#schema-dto.callbackresultresponse"><code>dto.CallbackResultResponse</code></a></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.callbackresultresponse">dto.CallbackResultResponse</h3>
-<p>提供商回调结果</p>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>provider</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>aliyun</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>received</code></td>
-    <td><code>boolean</code></td>
-    <td><span class="optional">No</span></td>
-    <td><code>True</code></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-<h3 id="schema-dto.simpleresponse">dto.SimpleResponse</h3>
-<table class="schema-table">
-  <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
-  <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>integer</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>message</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>timestamp</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr></tbody>
-</table>
-</section>
+<div class="meta"><span class="meta-item auth public">None</span> <span class="meta-item">application/json</span></div>
 <div class="actions">
   <a href="https://reference.autional.cn/communication-service/" target="_blank" rel="noreferrer" class="btn btn-primary">Try this API in Scalar →</a>
   <a href="https://reference.autional.cn/specs/communication-service.json" target="_blank" rel="noreferrer" class="btn btn-outline">Download OpenAPI spec (JSON) ↓</a>
