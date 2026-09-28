@@ -47,7 +47,7 @@
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -0.03em;
-    color: #003153;
+    color: var(--color-primary-700);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: -0.02em;
-    color: #003153;
+    color: var(--color-primary-700);
     margin-top: 2.25rem;
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
@@ -176,12 +176,12 @@
   }
 
   .wiki-detail-content thead tr {
-    background: #003153;
+    background: var(--color-primary-700);
     color: #ffffff;
   }
 
   .wiki-detail-content th {
-    background: #003153;
+    background: var(--color-primary-700);
     color: #ffffff;
     text-align: left;
     padding: 0.55rem 0.75rem;
@@ -317,7 +317,7 @@
   }
 
   .wiki-detail-content .btn-primary {
-    background: #003153;
+    background: var(--color-primary-700);
     color: #ffffff;
     box-shadow: 0 8px 20px rgba(0, 49, 83, 0.08);
   }
