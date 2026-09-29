@@ -162,6 +162,8 @@
         <a href="/saml-service/" class="">SAML Service<span class="count"></span></a>
         <a href="/hash-service-standard/" class="">Hash Service (Standard)<span class="count"></span></a>
         <a href="/hash-service-sm/" class="">Hash Service (SM3)<span class="count"></span></a>
+        <a href="/captcha3d-service/" class="">Captcha3D Service<span class="count"></span></a>
+        <a href="/config-service/" class="">Config Service<span class="count"></span></a>
       </nav>
     </aside>
     <main>
@@ -175,7 +177,7 @@
 <section><h2>Responses</h2>
 <table>
   <thead><tr><th>Status</th><th>Description</th><th>Schema</th></tr></thead>
-  <tbody><tr><td><strong>200</strong></td><td>授权码（无 redirect_uri 时）</td><td><a href="#schema-handler.authorizecoderesponse"><code>handler.authorizeCodeResponse</code></a></td></tr><tr><td><strong>302</strong></td><td>重定向到回调URL并附带 OAuth 错误（invalid_request/invalid_client/access_denied）</td><td><code>string</code></td></tr><tr><td><strong>400</strong></td><td>invalid_request_uri：PAR 请求无效/过期/已使用。参考：RFC 9126。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>403</strong></td><td>access_denied：user_id 与认证用户不匹配</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：授权服务器内部错误。参考：RFC 6749 §5.2。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
+  <tbody><tr><td><strong>200</strong></td><td>提供 redirect_uri 且 Accept: application/json 时：{redirect_to} 重定向目标（供同意页 fetch 提交读取）；无 redirect_uri 时为 {code} 授权码 JSON</td><td><a href="#schema-handler.authorizeredirectresponse"><code>handler.authorizeRedirectResponse</code></a></td></tr><tr><td><strong>302</strong></td><td>重定向到回调URL并附带 OAuth 错误（invalid_request/invalid_client/access_denied）</td><td><code>string</code></td></tr><tr><td><strong>400</strong></td><td>invalid_request_uri：PAR 请求无效/过期/已使用。参考：RFC 9126。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>401</strong></td><td>login_required：公开客户端同意提交必须绑定有效会话（无会话不可发码）</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>403</strong></td><td>access_denied：user_id/tenant_id 与认证会话不匹配（公开客户端以会话为准）</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr><tr><td><strong>500</strong></td><td>server_error：授权服务器内部错误。参考：RFC 6749 §5.2。</td><td><a href="#schema-gitee_com_autional_service-oauth_internal_handler_dto.oautherrorresponse"><code>gitee_com_autional_service-oauth_internal_handler_dto.OAuthErrorResponse</code></a></td></tr></tbody>
 </table>
 </section>
 <section><h2>Referenced Schemas</h2>
@@ -213,18 +215,11 @@
     <td>状态</td>
   </tr></tbody>
 </table>
-<h3 id="schema-handler.authorizecoderesponse">handler.authorizeCodeResponse</h3>
+<h3 id="schema-handler.authorizeredirectresponse">handler.authorizeRedirectResponse</h3>
 <table class="schema-table">
   <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Example</th><th>Constraints</th><th>Description</th></tr></thead>
   <tbody><tr>
-    <td><code>code</code></td>
-    <td><code>string</code></td>
-    <td><span class="optional">No</span></td>
-    <td></td>
-    <td style="font-size:11px"></td>
-    <td></td>
-  </tr><tr>
-    <td><code>state</code></td>
+    <td><code>redirect_to</code></td>
     <td><code>string</code></td>
     <td><span class="optional">No</span></td>
     <td></td>
