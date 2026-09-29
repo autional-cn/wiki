@@ -1,5 +1,9 @@
-/* 令牌与组件层由内置的 @autional-cn/tailwind-preset 交付（packages/tailwind-preset/，
-   由 ui 仓库的 pnpm sync:consumers 生成，与权威产物逐字节一致）。
+/* 令牌与组件层由 npm 已发布包交付：@autional-cn/tailwind-preset（Tailwind preset，其 tokens.css 为转发）
+   与 @autional-cn/tokens（tokens.css / profiles/*.css / primitives.css / fonts）。
+
+   2026-09 P4：本站点原先各存一份 packages/tailwind-preset/ 内置副本（由 ui 仓库的 pnpm sync:consumers
+   生成），那是「拷贝而非依赖」；副本已删除，改为直接依赖已发布的 npm 包。字体随之由 @autional-cn/tokens
+   下发——其 tokens.css 内的 @font-face 以相对路径引用同一个包里的 fonts/。
 
    本站点此前与 docs/developer/reference 同一形态（ui 仓库 KI-010）：没有 packages/ 目录、
    不 import 任何令牌，在 tailwind.config.cjs 里内联 primary/sky/amber 三套色阶，
@@ -8,9 +12,9 @@
    （= profiles/docs.css）提供，与原内联的一致。
 
    本站点专有的 .wiki-detail-content 部分原样保留在下方——primitives.css 不提供它。 */
-@import '../../packages/tailwind-preset/tokens.css';
-@import '../../packages/tailwind-preset/profile.css';
-@import '../../packages/tailwind-preset/primitives.css';
+@import '@autional-cn/tailwind-preset/tokens.css';
+@import '@autional-cn/tokens/profiles/docs.css';
+@import '@autional-cn/tokens/primitives.css';
 
 @tailwind base;
 @tailwind components;
