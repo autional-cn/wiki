@@ -28,6 +28,7 @@ const services = [
   { name:'hash-service-sm', title:'国密哈希服务', port:11027 },
   { name:'captcha3d-service', title:'3D 验证码服务', port:11028 },
   { name:'config-service', title:'配置中心服务', port:11007 },
+  { name:'stream-service', title:'实时事件流服务', port:11029 },
 ];
 
 export interface Props {
@@ -38,7 +39,7 @@ export interface Props {
 }
 const {
   title = 'Autional API 知识库',
-  description = '覆盖全部 26 个 Autional 微服务的交互式 API 文档，含详尽的端点规格说明。',
+  description = '覆盖全部 27 个 Autional 微服务的交互式 API 文档，含详尽的端点规格说明。',
   jsonLd = [],
   ogType = 'website',
 } = Astro.props;
