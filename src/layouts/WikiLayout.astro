@@ -113,7 +113,7 @@ const defaultJsonLd = {
   </div>
 
   <!-- 移动端服务列表抽屉 -->
-  <div id="wiki-drawer" class="fixed inset-0 z-50 lg:hidden hidden">
+  <div id="wiki-drawer" class="fixed inset-0 z-[var(--z-fixed)] lg:hidden hidden">
     <div data-drawer-close class="absolute inset-0 bg-primary-900/40 backdrop-blur-sm"></div>
     <div class="absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-white shadow-card flex flex-col">
       <div class="flex items-center justify-between px-4 py-3 border-b border-primary-100/50">
@@ -139,7 +139,7 @@ const defaultJsonLd = {
   </div>
 
   <!-- 搜索弹层（Pagefind UI 在首次打开时懒加载） -->
-  <div id="wiki-search-modal" class="fixed inset-0 z-[60] hidden">
+  <div id="wiki-search-modal" class="fixed inset-0 z-[var(--z-modal)] hidden">
     <div data-search-close class="absolute inset-0 bg-primary-900/40 backdrop-blur-sm"></div>
     <div class="relative mx-auto mt-[8vh] w-[92vw] max-w-2xl bg-white rounded-2xl shadow-card border border-primary-100 overflow-hidden">
       <div class="flex items-center justify-between px-4 py-2.5 border-b border-primary-100/50">
