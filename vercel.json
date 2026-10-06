@@ -1,10 +1,12 @@
 {
   "framework": "astro",
-  "buildCommand": "astro build",
+  "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "cleanUrls": true,
   "redirects": [
-    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true }
+    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
+    { "source": "/wiki/api", "destination": "/", "permanent": true },
+    { "source": "/wiki/api/:path*", "destination": "/:path*", "permanent": true }
   ]
 }

@@ -1,45 +1,15 @@
 ---
 import WikiLayout from '../layouts/WikiLayout.astro';
-
-const services = [
-  { name:'identity-service', title:'身份服务', port:11001 },
-  { name:'profile-service', title:'用户资料服务', port:11002 },
-  { name:'tenant-service', title:'租户服务', port:11003 },
-  { name:'session-service', title:'会话服务', port:11004 },
-  { name:'mfa-service', title:'多因素认证服务', port:11005 },
-  { name:'oauth-service', title:'OAuth 服务', port:11006 },
-  { name:'wallet-service', title:'钱包服务', port:11011 },
-  { name:'point-service', title:'积分服务', port:11012 },
-  { name:'audit-service', title:'审计服务', port:11013 },
-  { name:'notification-service', title:'通知服务', port:11014 },
-  { name:'communication-service', title:'通信服务', port:11015 },
-  { name:'storage-service', title:'存储服务', port:11016 },
-  { name:'billing-service', title:'计费服务', port:11017 },
-  { name:'compliance-service', title:'合规服务', port:11018 },
-  { name:'status-service', title:'状态服务', port:11019 },
-  { name:'secret-service', title:'密钥服务', port:11020 },
-  { name:'saml-service', title:'SAML 服务', port:11021 },
-  { name:'pay-service', title:'支付服务', port:11022 },
-  { name:'thirdparty-service', title:'第三方服务', port:11023 },
-  { name:'verification-service', title:'身份验证服务', port:11024 },
-  { name:'rbac-service', title:'RBAC 服务', port:11025 },
-  { name:'gateway-service', title:'网关服务', port:11080 },
-  { name:'hash-service-standard', title:'密码哈希服务', port:11026 },
-  { name:'hash-service-sm', title:'国密哈希服务', port:11027 },
-  { name:'captcha3d-service', title:'3D 验证码服务', port:11028 },
-  { name:'config-service', title:'配置中心服务', port:11007 },
-  { name:'stream-service', title:'实时事件流服务', port:11029 },
-];
+import { services } from '../data/services';
 ---
 
 <WikiLayout title="API 知识库 — Autional" description="覆盖全部 27 个 Autional 微服务的端点文档，可浏览 1400+ API 端点规格与请求/响应结构。">
   <div class="flex-1 overflow-y-auto">
-    <div class="max-w-4xl mx-auto px-8 py-10">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 py-10">
       <div class="mb-10">
         <h1 class="text-3xl font-extrabold tracking-[var(--letter-spacing-display-lg)] text-primary-900">API 知识库</h1>
         <p class="mt-2 text-base text-neutral-500 leading-relaxed max-w-lg">
-          覆盖全部 {services.length} 个微服务的端点文档。
-          选择一个服务即可浏览其 API 参考。
+          覆盖全部 {services.length} 个微服务的端点文档。选择一个服务即可浏览其 API 参考。
         </p>
         <div class="mt-4 flex items-center gap-2 flex-wrap">
           <span class="brand-kicker">OpenAPI 3.0</span>
@@ -52,7 +22,7 @@ const services = [
         {services.map(s => (
           <a href={`/${s.name}/`} class="group block rounded-2xl border border-primary-100/80 bg-white p-5 transition hover:border-primary-300 hover:shadow-card hover:-translate-y-0.5 no-underline">
             <div class="flex items-start justify-between">
-              <h3 class="text-sm font-semibold text-primary-900 group-hover:text-primary-700 transition">{s.title}</h3>
+              <h2 class="text-sm font-semibold text-primary-900 group-hover:text-primary-700 transition">{s.title}</h2>
               <span class="text-[0.65rem] font-mono text-primary-400 shrink-0 mt-0.5">:{s.port}</span>
             </div>
             <div class="mt-3 flex items-center gap-2">

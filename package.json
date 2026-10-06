@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --port 4435",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview --port 4435"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.0",
+    "pagefind": "^1.5.2",
     "typescript": "^5.8.3"
   }
 }

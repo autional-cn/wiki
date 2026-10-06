@@ -2,18 +2,17 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import WikiLayout from '../layouts/WikiLayout.astro';
+import { services, serviceByName } from '../data/services';
 
 export async function getStaticPaths() {
-  const svcs = ["identity-service","profile-service","tenant-service","session-service","mfa-service","oauth-service","wallet-service","point-service","audit-service","notification-service","communication-service","storage-service","billing-service","compliance-service","status-service","secret-service","saml-service","pay-service","thirdparty-service","verification-service","rbac-service","gateway-service","hash-service-standard","hash-service-sm","captcha3d-service","config-service","stream-service"];
-  return svcs.map(n => ({ params: { service: n } }));
+  return services.map(s => ({ params: { service: s.name } }));
 }
 
 const { service } = Astro.params;
+const svc = serviceByName.get(service ?? '');
 
 // Read pre-generated wiki HTML at build time
-const htmlPath = join(process.cwd(), 'public/wiki/api', service ?? '', 'index.html');
-let pageTitle = `${service} API 文档 — Autional`;
-let description = '';
+const htmlPath = join(process.cwd(), 'wiki-src', service ?? '', 'index.html');
 let endpointHtml = '';
 let inlineStyles = '';
 let endpointCount = 0;
@@ -21,12 +20,6 @@ let jsonLdScripts: Record<string, any>[] = [];
 
 try {
   const html = readFileSync(htmlPath, 'utf-8');
-
-  const titleMatch = html.match(/<title>(.*?)<\/title>/);
-  if (titleMatch) pageTitle = titleMatch[1];
-
-  const descMatch = html.match(/<meta name="description" content="([^"]*)"/);
-  if (descMatch) description = descMatch[1];
 
   const styleMatch = html.match(/<style>([\s\S]*?)<\/style>/);
   if (styleMatch) inlineStyles = styleMatch[1];
@@ -52,17 +45,22 @@ try {
 } catch {
   endpointHtml = '<p class="text-sm text-neutral-400 py-24 text-center">端点尚未收录。请运行 sync-wiki-zh.py 生成文档内容。</p>';
 }
+
+const pageTitle = svc ? `${svc.title}（${svc.name}）API 文档 — Autional` : `${service} API 文档 — Autional`;
+const description = svc
+  ? `${svc.title}（${svc.name}）API 参考：共 ${endpointCount} 个端点，含请求参数、请求体与响应结构说明。服务端口 ${svc.port}。`
+  : `Autional ${service} 服务的 API 端点文档。`;
 ---
 
 <WikiLayout title={pageTitle} description={description} jsonLd={jsonLdScripts}>
   <div class="flex-1 overflow-y-auto bg-neutral-50/50">
     <div class="sticky top-0 bg-white/95 backdrop-blur border-b border-primary-100/50 px-4 py-3 z-10">
       <div class="flex items-center justify-between">
-        <span class="text-sm font-semibold text-primary-900 truncate">{service}</span>
-        <span class="text-[0.65rem] font-mono font-medium text-primary-400">{endpointCount} 个端点</span>
+        <span class="text-sm font-semibold text-primary-900 truncate">{svc?.title ?? service}</span>
+        <span class="text-[0.65rem] font-mono font-medium text-primary-400 shrink-0">{endpointCount} 个端点</span>
       </div>
     </div>
-    <div class="wiki-content px-8 py-10 max-w-4xl">
+    <div class="wiki-content px-4 md:px-8 py-10 max-w-4xl">
       {inlineStyles && <style set:html={inlineStyles} />}
       <div set:html={endpointHtml} />
     </div>

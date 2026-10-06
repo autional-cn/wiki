@@ -157,6 +157,16 @@
     border-color: var(--color-primary-600);
   }
 
+  /* Mobile: horizontal scroll container wrapped around every table by sync-wiki-zh.py */
+  .wiki-detail-content .table-wrap {
+    overflow-x: auto;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .wiki-detail-content .table-wrap table {
+    margin: 0;
+  }
+
   /* Tables (parameters, responses, schemas) */
   .wiki-detail-content table {
     width: 100%;
@@ -346,5 +356,17 @@
   /* Section spacing */
   .wiki-detail-content section {
     margin-bottom: 0.5rem;
+  }
+
+  /* Pagefind UI theming (assets load lazily on first search open) */
+  #wiki-search-ui {
+    --pagefind-ui-primary: var(--color-primary-700);
+    --pagefind-ui-text: var(--color-neutral-800);
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border: var(--color-primary-100);
+    --pagefind-ui-tag: var(--color-primary-50);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 10px;
+    --pagefind-ui-font: inherit;
   }
 }
