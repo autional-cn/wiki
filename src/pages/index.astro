@@ -20,7 +20,7 @@ import { services } from '../data/services';
       <!-- 服务卡片网格 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {services.map(s => (
-          <a href={`/${s.name}/`} class="group block rounded-2xl border border-primary-100/80 bg-white p-5 transition hover:border-primary-300 hover:shadow-card hover:-translate-y-0.5 no-underline">
+          <a href={`/${s.name}/`} class="group block rounded-md border border-primary-100/80 bg-white p-5 transition hover:border-primary-300 hover:shadow-card hover:-translate-y-0.5 no-underline">
             <div class="flex items-start justify-between">
               <h2 class="text-sm font-semibold text-primary-900 group-hover:text-primary-700 transition">{s.title}</h2>
               <span class="text-[0.65rem] font-mono text-primary-400 shrink-0 mt-0.5">:{s.port}</span>
