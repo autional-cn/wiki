@@ -43,7 +43,7 @@ try {
     try { jsonLdScripts.push(JSON.parse(m[1])); } catch {}
   }
 } catch {
-  endpointHtml = '<p class="text-sm text-neutral-400 py-20 text-center">端点尚未收录。请运行 sync-wiki-zh.py 生成文档内容。</p>';
+  endpointHtml = '<p class="text-sm text-[var(--color-text-muted)] py-20 text-center">端点尚未收录。请运行 sync-wiki-zh.py 生成文档内容。</p>';
 }
 
 const pageTitle = svc ? `${svc.title}（${svc.name}）API 文档 — Autional` : `${service} API 文档 — Autional`;

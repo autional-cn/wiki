@@ -92,7 +92,7 @@ const defaultJsonLd = {
     <!-- 侧边栏（桌面） -->
     <aside class="hidden lg:block w-60 shrink-0 border-r border-primary-100/50 bg-white overflow-y-auto">
       <div class="sticky top-0 bg-white/95 backdrop-blur border-b border-primary-100/50 px-4 py-3 z-10">
-        <button type="button" data-search-open class="flex items-center gap-2 w-full rounded-xl border border-primary-100 bg-neutral-50/50 px-3 py-2 text-sm text-neutral-400 hover:border-primary-300 hover:text-neutral-500 transition">
+        <button type="button" data-search-open class="flex items-center gap-2 w-full rounded-xl border border-primary-100 bg-neutral-50/50 px-3 py-2 text-sm text-[var(--color-text-muted)] hover:border-primary-300 hover:text-neutral-500 transition">
           <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
           </svg>
@@ -125,7 +125,7 @@ const defaultJsonLd = {
         </button>
       </div>
       <div class="px-4 pt-3">
-        <button type="button" data-search-open class="flex items-center gap-2 w-full rounded-xl border border-primary-100 bg-neutral-50/50 px-3 py-2 text-sm text-neutral-400 hover:border-primary-300 hover:text-neutral-500 transition">
+        <button type="button" data-search-open class="flex items-center gap-2 w-full rounded-xl border border-primary-100 bg-neutral-50/50 px-3 py-2 text-sm text-[var(--color-text-muted)] hover:border-primary-300 hover:text-neutral-500 transition">
           <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
           </svg>
@@ -218,7 +218,7 @@ const defaultJsonLd = {
           });
         } catch {
           if (searchMount) {
-            searchMount.innerHTML = '<p class="py-6 text-center text-sm text-neutral-400">搜索索引仅在构建产物中可用：请以 <code>pnpm build</code> 后的站点访问。</p>';
+            searchMount.innerHTML = '<p class="py-6 text-center text-sm text-[var(--color-text-muted)]">搜索索引仅在构建产物中可用：请以 <code>pnpm build</code> 后的站点访问。</p>';
           }
           return;
         }
