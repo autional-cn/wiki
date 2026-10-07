@@ -141,7 +141,7 @@ const defaultJsonLd = {
   <!-- 搜索弹层（Pagefind UI 在首次打开时懒加载） -->
   <div id="wiki-search-modal" class="fixed inset-0 z-[var(--z-modal)] hidden">
     <div data-search-close class="absolute inset-0 bg-primary-900/40 backdrop-blur-sm"></div>
-    <div class="relative mx-auto mt-[8vh] w-[92vw] max-w-2xl bg-white rounded-md shadow-card border border-primary-100 overflow-hidden">
+    <div class="relative mx-auto mt-[var(--layout-hero-offset)] w-[92vw] max-w-2xl bg-white rounded-md shadow-card border border-primary-100 overflow-hidden">
       <div class="flex items-center justify-between px-4 py-2.5 border-b border-primary-100/50">
         <span class="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-primary-500">搜索</span>
         <button type="button" data-search-close class="p-1.5 -mr-1 rounded-lg text-primary-500 hover:bg-primary-50 transition" aria-label="关闭搜索">
